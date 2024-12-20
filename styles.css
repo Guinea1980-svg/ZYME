@@ -91,6 +91,6 @@ button:focus:not(:focus-visible) {
  outline: none;
 }
 
-h1 {
+.Text {
   color: AliceBlue;
 }
