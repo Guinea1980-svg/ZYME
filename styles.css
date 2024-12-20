@@ -89,3 +89,8 @@ button:active .shadow {
 
 button:focus:not(:focus-visible) {
  outline: none;
+}
+
+h1 {
+  color: AliceBlue;
+}
