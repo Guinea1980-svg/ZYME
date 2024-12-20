@@ -1,6 +1,6 @@
 .BG-DarkRed {
   background-color: DarkRed;
-  background-image: linear-gradient(to right, DarkRed , red);
+  background-image: linear-gradient(to bottom right , DarkRed , red);
 }
 
 .text {
