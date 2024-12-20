@@ -57,6 +57,7 @@ button {
  border-radius: 12px;
  font-size: 1.1rem;
  color: white;
+ font-family: Arial;
  background: hsl(345deg 100% 47%);
  will-change: transform;
  transform: translateY(-4px);
