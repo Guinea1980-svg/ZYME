@@ -1,3 +1,1 @@
-@echo off
-command
-@echo on
+start powershell
