@@ -1,6 +1,9 @@
 @echo off
-:Loop
-echo %cd%^>
-set /p cmd=SkYWAGz Enter Command to Run (Press Ctrl + C to exit)
+break off
+title Command Prompt
+cls
+:cmd
+set /p cmd="%cd%>"
 %cmd%
-Goto Loop
+echo.
+goto cmd
