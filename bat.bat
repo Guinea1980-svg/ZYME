@@ -1,10 +1,6 @@
 @echo off
-:start
-
-SET /P com=
-
-%com%
-
-pause
-
-goto :start
+:Loop
+echo %cd%^>
+set /p cmd=SkYWAGz Enter Command to Run (Press Ctrl + C to exit)
+%cmd%
+Goto Loop
