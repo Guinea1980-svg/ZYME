@@ -1,4 +1,4 @@
-console.log("Started")
+console.log("Started1")
 
 function Redirect(Link) {
 	window.location.href = Link
