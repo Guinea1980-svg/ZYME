@@ -1,3 +1,4 @@
+console.log("Started")
 
 function Redirect(Link) {
 	window.location.href = Link
