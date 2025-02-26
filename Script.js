@@ -4,6 +4,12 @@ function Redirect(Link) {
 	window.location.href = Link
 }
 
+function NewTabLink(url) {
+
+	window.open(url, '_blank').focus();
+}
+
+
 document.onkeypress = function (e) {
 	 e = e || window.event;
 	console.log(e.keyCode)
