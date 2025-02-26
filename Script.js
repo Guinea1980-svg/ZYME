@@ -15,9 +15,14 @@ document.onkeypress = function (e) {
 	 e = e || window.event;
 	prevkey = e.keyCode
 	console.log(e.keyCode)
+	if (e.keyCode == 112) {
+		if (e.keyCode == 100) {
+			window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/dsipdfiushndjkn.JPG"
+		
+		}
+		
+	}
     	if (e.keyCode == 109) {
-		
-		
 		window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/dsipdfiushndjkn.JPG"
 		
 	}
