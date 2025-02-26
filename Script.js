@@ -15,9 +15,8 @@ let prevkey
 
 document.onkeypress = function (e) {
 	 e = e || window.event;
-	prevkey = e.keyCode
 	console.log(e.keyCode)
-	if (prevkey == 112) {
+	if (e.keyCode == 112) {
 		if (e.keyCode == 100) {
 			window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/dsipdfiushndjkn.JPG"
 		
@@ -28,6 +27,7 @@ document.onkeypress = function (e) {
 		window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/dsipdfiushndjkn.JPG"
 		
 	}
+	prevkey = e.keyCode
 };
 
 
