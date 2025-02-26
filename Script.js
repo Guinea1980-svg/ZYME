@@ -1,4 +1,4 @@
-let Version = "1.02"
+let Version = "1.03"
 
 console.log("Version: " + Version)
 
@@ -16,9 +16,9 @@ let prevkey
 document.onkeypress = function (e) {
 	 e = e || window.event;
 	console.log(e.keyCode)
-	if (e.keyCode == 112) {
+	if (prevkey == 112) {
 		if (e.keyCode == 100) {
-			window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/dsipdfiushndjkn.JPG"
+			window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/guyinsuite.webp"
 		
 		}
 		
