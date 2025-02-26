@@ -1,4 +1,6 @@
-console.log("Started1")
+let Version = "1.01"
+
+console.log("Version: " + Version)
 
 function Redirect(Link) {
 	window.location.href = Link
