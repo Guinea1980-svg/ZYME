@@ -83,6 +83,10 @@
   transform: skew(-10deg) translateY(8px);
   box-shadow: 0 0 0 var(--😀😀😀);
 }
+.button_download:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1
+}
 
 .flex-container {
   display: column
@@ -120,9 +124,7 @@
 }
 
 .button1:active,
-.button1:hover .tooltiptext {
-	visibility: visible;
-	opacity: 1;
+.button1:hover {
 	outline: 0;
 }
 
