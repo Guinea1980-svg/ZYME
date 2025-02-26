@@ -9,9 +9,11 @@ function NewTabLink(url) {
 	window.open(url, '_blank').focus();
 }
 
+let prevkey 
 
 document.onkeypress = function (e) {
 	 e = e || window.event;
+	prevkey = e.keyCode
 	console.log(e.keyCode)
     	if (e.keyCode == 109) {
 		
