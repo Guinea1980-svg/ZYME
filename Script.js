@@ -1,6 +1,51 @@
-let Version = "1.03"
+let Version = "1.04"
 
 console.log("Version: " + Version)
+
+
+let X_0_Y_0 = "🟩"
+let X_0_Y_1 = "🟥"
+let X_0_Y_2 = "🟥"
+let X_0_Y_3 = "🟥"
+
+let X_1_Y_0 = "🟥"
+let X_1_Y_1 = "🟥"
+let X_1_Y_2 = "🟥"
+let X_1_Y_3 = "🟥"
+
+let X_2_Y_0 = "🟥"
+let X_2_Y_1 = "🟥"
+let X_2_Y_2 = "🟥"
+let X_2_Y_3 = "🟥"
+
+let X_3_Y_0 = "🟥"
+let X_3_Y_1 = "🟥"
+let X_3_Y_2 = "🟥"
+let X_3_Y_3 = "🟩"
+
+
+
+function Update() {
+	
+	document
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function Redirect(Link) {
 	window.location.href = Link
