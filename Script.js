@@ -1,33 +1,53 @@
-let Version = "1.04"
+let Version = "1.05"
 
 console.log("Version: " + Version)
 
 
-let X_0_Y_0 = "🟩"
-let X_0_Y_1 = "🟥"
-let X_0_Y_2 = "🟥"
-let X_0_Y_3 = "🟥"
+let screen = { 
+ X_0_Y_0: "🟩",
+ X_0_Y_1: "🟥",
+ X_0_Y_2: "🟥",
+ X_0_Y_3: "🟥",
 
-let X_1_Y_0 = "🟥"
-let X_1_Y_1 = "🟥"
-let X_1_Y_2 = "🟥"
-let X_1_Y_3 = "🟥"
+ X_1_Y_0: "🟥",
+ X_1_Y_1: "🟥",
+ X_1_Y_2: "🟥",
+ X_1_Y_3: "🟥",
 
-let X_2_Y_0 = "🟥"
-let X_2_Y_1 = "🟥"
-let X_2_Y_2 = "🟥"
-let X_2_Y_3 = "🟥"
+ X_2_Y_0: "🟥",
+ X_2_Y_1: "🟥",
+ X_2_Y_2: "🟦",
+ X_2_Y_3: "🟥",
 
-let X_3_Y_0 = "🟥"
-let X_3_Y_1 = "🟥"
-let X_3_Y_2 = "🟥"
-let X_3_Y_3 = "🟩"
+ X_3_Y_0: "🟥",
+ X_3_Y_1: "🟥",
+ X_3_Y_2: "🟥",
+ X_3_Y_3: "🟩",
+}
 
 
 
 function Update() {
 	
-	document
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_0_Y_0"]
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_1_Y_0"]
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_2_Y_0"]
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_3_Y_0"]
+
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_0_Y_1"]
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_1_Y_1"]
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_2_Y_1"]
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_3_Y_1"]
+
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_0_Y_2"]
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_1_Y_2"]
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_2_Y_2"]
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_3_Y_2"]
+
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_0_Y_3"]
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_1_Y_3"]
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_2_Y_3"]
+	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_3_Y_3"]
 	
 	
 	
