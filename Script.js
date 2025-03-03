@@ -7,6 +7,7 @@ let prevkey
 document.onkeypress = function (e) {
 	e = e || window.event;
 	console.log(e.keyCode)
+	let prevkey
 	if (prevkey == 112) {
 		if (e.keyCode == 100) {
 			window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/guyinsuite.webp"
@@ -14,7 +15,7 @@ document.onkeypress = function (e) {
 		}
 		
 	}
-    	if (e.keyCode == 109) {
+    	if (e.keyCode == 119) {
 		MoveCube("Down")
 		
 	}
