@@ -13,21 +13,74 @@ let screen = {
  X_0_Y_1: "🟥",
  X_0_Y_2: "🟥",
  X_0_Y_3: "🟥",
+ X_0_Y_4: "🟥",
+ X_0_Y_5: "🟥",
+ X_0_Y_6: "🟥",
+ X_0_Y_7: "🟥",
+
 
  X_1_Y_0: "🟥",
  X_1_Y_1: "🟥",
  X_1_Y_2: "🟥",
  X_1_Y_3: "🟥",
+ X_1_Y_4: "🟥",
+ X_1_Y_5: "🟥",
+ X_1_Y_6: "🟥",
+ X_1_Y_7: "🟥",
 
  X_2_Y_0: "🟥",
  X_2_Y_1: "🟥",
  X_2_Y_2: "🟥",
  X_2_Y_3: "🟥",
+ X_2_Y_4: "🟥",
+ X_2_Y_5: "🟥",
+ X_2_Y_6: "🟥",
+ X_2_Y_7: "🟥",
 
  X_3_Y_0: "🟥",
  X_3_Y_1: "🟥",
  X_3_Y_2: "🟥",
  X_3_Y_3: "🟥",
+ X_3_Y_4: "🟥",
+ X_3_Y_5: "🟥",
+ X_3_Y_6: "🟥",
+ X_3_Y_7: "🟥",
+
+ X_4_Y_0: "🟥",
+ X_4_Y_1: "🟥",
+ X_4_Y_2: "🟥",
+ X_4_Y_3: "🟥",
+ X_4_Y_4: "🟥",
+ X_4_Y_5: "🟥",
+ X_4_Y_6: "🟥",
+ X_4_Y_7: "🟥",
+
+ X_5_Y_0: "🟥",
+ X_5_Y_1: "🟥",
+ X_5_Y_2: "🟥",
+ X_5_Y_3: "🟥",
+ X_5_Y_4: "🟥",
+ X_5_Y_5: "🟥",
+ X_5_Y_6: "🟥",
+ X_5_Y_7: "🟥",
+
+ X_6_Y_0: "🟥",
+ X_6_Y_1: "🟥",
+ X_6_Y_2: "🟥",
+ X_6_Y_3: "🟥",
+ X_6_Y_4: "🟥",
+ X_6_Y_5: "🟥",
+ X_6_Y_6: "🟥",
+ X_6_Y_7: "🟥",
+
+ X_7_Y_0: "🟥",
+ X_7_Y_1: "🟥",
+ X_7_Y_2: "🟥",
+ X_7_Y_3: "🟥",
+ X_7_Y_4: "🟥",
+ X_7_Y_5: "🟥",
+ X_7_Y_6: "🟥",
+ X_7_Y_7: "🟥",
 }
 
 
@@ -38,21 +91,73 @@ function Update() {
 	document.getElementsByClassName("X_1_Y_0")[0].innerHTML = screen["X_1_Y_0"]
 	document.getElementsByClassName("X_2_Y_0")[0].innerHTML = screen["X_2_Y_0"]
 	document.getElementsByClassName("X_3_Y_0")[0].innerHTML = screen["X_3_Y_0"]
+	document.getElementsByClassName("X_4_Y_0")[0].innerHTML = screen["X_4_Y_0"]
+	document.getElementsByClassName("X_5_Y_0")[0].innerHTML = screen["X_5_Y_0"]
+	document.getElementsByClassName("X_6_Y_0")[0].innerHTML = screen["X_6_Y_0"]
+	document.getElementsByClassName("X_7_Y_0")[0].innerHTML = screen["X_7_Y_0"]
 
 	document.getElementsByClassName("X_0_Y_1")[0].innerHTML = screen["X_0_Y_1"]
 	document.getElementsByClassName("X_1_Y_1")[0].innerHTML = screen["X_1_Y_1"]
 	document.getElementsByClassName("X_2_Y_1")[0].innerHTML = screen["X_2_Y_1"]
 	document.getElementsByClassName("X_3_Y_1")[0].innerHTML = screen["X_3_Y_1"]
+	document.getElementsByClassName("X_4_Y_1")[0].innerHTML = screen["X_4_Y_1"]
+	document.getElementsByClassName("X_5_Y_1")[0].innerHTML = screen["X_5_Y_1"]
+	document.getElementsByClassName("X_6_Y_1")[0].innerHTML = screen["X_6_Y_1"]
+	document.getElementsByClassName("X_7_Y_1")[0].innerHTML = screen["X_7_Y_1"]
 
 	document.getElementsByClassName("X_0_Y_2")[0].innerHTML = screen["X_0_Y_2"]
 	document.getElementsByClassName("X_1_Y_2")[0].innerHTML = screen["X_1_Y_2"]
 	document.getElementsByClassName("X_2_Y_2")[0].innerHTML = screen["X_2_Y_2"]
 	document.getElementsByClassName("X_3_Y_2")[0].innerHTML = screen["X_3_Y_2"]
+	document.getElementsByClassName("X_4_Y_2")[0].innerHTML = screen["X_4_Y_2"]
+	document.getElementsByClassName("X_5_Y_2")[0].innerHTML = screen["X_5_Y_2"]
+	document.getElementsByClassName("X_6_Y_2")[0].innerHTML = screen["X_6_Y_2"]
+	document.getElementsByClassName("X_7_Y_2")[0].innerHTML = screen["X_7_Y_2"]
 
 	document.getElementsByClassName("X_0_Y_3")[0].innerHTML = screen["X_0_Y_3"]
 	document.getElementsByClassName("X_1_Y_3")[0].innerHTML = screen["X_1_Y_3"]
 	document.getElementsByClassName("X_2_Y_3")[0].innerHTML = screen["X_2_Y_3"]
 	document.getElementsByClassName("X_3_Y_3")[0].innerHTML = screen["X_3_Y_3"]
+	document.getElementsByClassName("X_4_Y_3")[0].innerHTML = screen["X_4_Y_3"]
+	document.getElementsByClassName("X_5_Y_3")[0].innerHTML = screen["X_5_Y_3"]
+	document.getElementsByClassName("X_6_Y_3")[0].innerHTML = screen["X_6_Y_3"]
+	document.getElementsByClassName("X_7_Y_3")[0].innerHTML = screen["X_7_Y_3"]
+
+	document.getElementsByClassName("X_0_Y_4")[0].innerHTML = screen["X_0_Y_4"]
+	document.getElementsByClassName("X_1_Y_4")[0].innerHTML = screen["X_1_Y_4"]
+	document.getElementsByClassName("X_2_Y_4")[0].innerHTML = screen["X_2_Y_4"]
+	document.getElementsByClassName("X_3_Y_4")[0].innerHTML = screen["X_3_Y_4"]
+	document.getElementsByClassName("X_4_Y_4")[0].innerHTML = screen["X_4_Y_4"]
+	document.getElementsByClassName("X_5_Y_4")[0].innerHTML = screen["X_5_Y_4"]
+	document.getElementsByClassName("X_6_Y_4")[0].innerHTML = screen["X_6_Y_4"]
+	document.getElementsByClassName("X_7_Y_4")[0].innerHTML = screen["X_7_Y_4"]
+
+	document.getElementsByClassName("X_0_Y_5")[0].innerHTML = screen["X_0_Y_5"]
+	document.getElementsByClassName("X_1_Y_5")[0].innerHTML = screen["X_1_Y_5"]
+	document.getElementsByClassName("X_2_Y_5")[0].innerHTML = screen["X_2_Y_5"]
+	document.getElementsByClassName("X_3_Y_5")[0].innerHTML = screen["X_3_Y_5"]
+	document.getElementsByClassName("X_4_Y_5")[0].innerHTML = screen["X_4_Y_5"]
+	document.getElementsByClassName("X_5_Y_5")[0].innerHTML = screen["X_5_Y_5"]
+	document.getElementsByClassName("X_6_Y_5")[0].innerHTML = screen["X_6_Y_5"]
+	document.getElementsByClassName("X_7_Y_5")[0].innerHTML = screen["X_7_Y_5"]
+
+	document.getElementsByClassName("X_0_Y_6")[0].innerHTML = screen["X_0_Y_6"]
+	document.getElementsByClassName("X_1_Y_6")[0].innerHTML = screen["X_1_Y_6"]
+	document.getElementsByClassName("X_2_Y_6")[0].innerHTML = screen["X_2_Y_6"]
+	document.getElementsByClassName("X_3_Y_6")[0].innerHTML = screen["X_3_Y_6"]
+	document.getElementsByClassName("X_4_Y_6")[0].innerHTML = screen["X_4_Y_6"]
+	document.getElementsByClassName("X_5_Y_6")[0].innerHTML = screen["X_5_Y_6"]
+	document.getElementsByClassName("X_6_Y_6")[0].innerHTML = screen["X_6_Y_6"]
+	document.getElementsByClassName("X_7_Y_6")[0].innerHTML = screen["X_7_Y_6"]
+
+	document.getElementsByClassName("X_0_Y_7")[0].innerHTML = screen["X_0_Y_7"]
+	document.getElementsByClassName("X_1_Y_7")[0].innerHTML = screen["X_1_Y_7"]
+	document.getElementsByClassName("X_2_Y_7")[0].innerHTML = screen["X_2_Y_7"]
+	document.getElementsByClassName("X_3_Y_7")[0].innerHTML = screen["X_3_Y_7"]
+	document.getElementsByClassName("X_4_Y_7")[0].innerHTML = screen["X_4_Y_7"]
+	document.getElementsByClassName("X_5_Y_7")[0].innerHTML = screen["X_5_Y_7"]
+	document.getElementsByClassName("X_6_Y_7")[0].innerHTML = screen["X_6_Y_7"]
+	document.getElementsByClassName("X_7_Y_7")[0].innerHTML = screen["X_7_Y_7"]
 	
 	
 	
