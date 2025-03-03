@@ -169,23 +169,47 @@ function MoveCube(Dir) {
 	Cube_Y_Old = Cube_Y
 	
 	if (Dir == "Up") {
+
+		if (Cube_Y == 7) {
+			
+			return 0 
+			
+		else {
 		
-		Cube_Y += 1
-		
+			Cube_Y += 1
+		}
 	}
 	if (Dir == "Down") {
+		if (Cube_Y == 0) {
+			
+			return 0 
+			
+		else {
 		
-		Cube_Y -= 1
+			Cube_Y -= 1
+
+		}
 		
 	}
 	if (Dir == "Left") {
+
+		if (Cube_X == 7) {
+			return 0 
+		else {
 		
-		Cube_X += 1
+			Cube_X += 1
+			
+		}
 		
 	}
 	if (Dir == "Right") {
+		if (Cube_X == 0) {
+			return 0 
+		else {
 		
-		Cube_X -= 1
+			Cube_X -= 1
+			
+		}
 		
 	}
 	ChangeDisplayCube()
