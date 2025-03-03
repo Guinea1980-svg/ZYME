@@ -2,6 +2,37 @@ let Version = "1.07"
 
 console.log("Version: " + Version)
 
+let prevkey 
+
+document.onkeypress = function (e) {
+	e = e || window.event;
+	console.log(e.keyCode)
+	if (prevkey == 112) {
+		if (e.keyCode == 100) {
+			window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/guyinsuite.webp"
+		
+		}
+		
+	}
+    	if (e.keyCode == 109) {
+		MoveCube("Down")
+		
+	}
+	if (e.keyCode == 97) {
+		MoveCube("Right")
+		
+	}
+	if (e.keyCode == 115) {
+		MoveCube("Up")
+		
+	}
+	if (e.keyCode == 100) {
+		MoveCube("Left")
+		
+	}
+	prevkey = e.keyCode
+};
+
 let Cube_X_Old = 0
 let Cube_Y_Old = 0
 let Cube_X = 0
@@ -213,8 +244,6 @@ function ChangeDisplayCube() {
 	
 }
 
-Update()
-
 
 
 
@@ -235,24 +264,6 @@ function NewTabLink(url) {
 	window.open(url, '_blank').focus();
 }
 
-let prevkey 
-
-document.onkeypress = function (e) {
-	 e = e || window.event;
-	console.log(e.keyCode)
-	if (prevkey == 112) {
-		if (e.keyCode == 100) {
-			window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/guyinsuite.webp"
-		
-		}
-		
-	}
-    	if (e.keyCode == 109) {
-		window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/dsipdfiushndjkn.JPG"
-		
-	}
-	prevkey = e.keyCode
-};
 
 
 function download(file, text) {
