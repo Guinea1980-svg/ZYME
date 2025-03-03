@@ -170,45 +170,26 @@ function MoveCube(Dir) {
 	
 	if (Dir == "Up") {
 
-		if (Cube_Y == 7) {
-			
-			return 0 
-			
-		else {
-		
+		if (Cube_Y != 7) {
 			Cube_Y += 1
 		}
 	}
 	if (Dir == "Down") {
-		if (Cube_Y == 0) {
-			
-			return 0 
-			
-		else {
-		
+		if (Cube_Y != 0) {
 			Cube_Y -= 1
-
 		}
 		
 	}
 	if (Dir == "Left") {
 
-		if (Cube_X == 7) {
-			return 0 
-		else {
-		
+		if (Cube_X != 7) {
 			Cube_X += 1
-			
 		}
 		
 	}
 	if (Dir == "Right") {
-		if (Cube_X == 0) {
-			return 0 
-		else {
-		
+		if (Cube_X != 0) {
 			Cube_X -= 1
-			
 		}
 		
 	}
