@@ -224,6 +224,11 @@ function MoveCube(Dir) {
 			Cube_Y_Old = Cube_Y
 			Cube_Y += 1
 			ChangeDisplayCube()
+			if (Coin_X == Cube_X) {
+				if (Coin_Y == Cube_Y) {
+					RandomizeCoin()
+				}
+			}
 			return 0
 		}
 		if (Cube_Y == 7) {
@@ -231,6 +236,11 @@ function MoveCube(Dir) {
 			Cube_Y_Old = Cube_Y
 			Cube_Y = 0
 			ChangeDisplayCube()
+			if (Coin_X == Cube_X) {
+				if (Coin_Y == Cube_Y) {
+					RandomizeCoin()
+				}
+			}
 			return 0
 		}
 	}
@@ -241,6 +251,11 @@ function MoveCube(Dir) {
 			Cube_Y_Old = Cube_Y
 			Cube_Y -= 1
 			ChangeDisplayCube()
+			if (Coin_X == Cube_X) {
+				if (Coin_Y == Cube_Y) {
+					RandomizeCoin()
+				}
+			}
 			return 0
 		}
 		if (Cube_Y == 0) {
@@ -248,6 +263,11 @@ function MoveCube(Dir) {
 			Cube_Y_Old = Cube_Y
 			Cube_Y = 7
 			ChangeDisplayCube()
+			if (Coin_X == Cube_X) {
+				if (Coin_Y == Cube_Y) {
+					RandomizeCoin()
+				}
+			}
 			return 0
 		}
 		
@@ -259,6 +279,11 @@ function MoveCube(Dir) {
 			Cube_Y_Old = Cube_Y
 			Cube_X += 1
 			ChangeDisplayCube()
+			if (Coin_X == Cube_X) {
+				if (Coin_Y == Cube_Y) {
+					RandomizeCoin()
+				}
+			}
 			return 0
 		}
 		if (Cube_X == 7) {
@@ -266,6 +291,11 @@ function MoveCube(Dir) {
 			Cube_Y_Old = Cube_Y
 			Cube_X = 0
 			ChangeDisplayCube()
+			if (Coin_X == Cube_X) {
+				if (Coin_Y == Cube_Y) {
+					RandomizeCoin()
+				}
+			}
 			return 0
 		}
 		
@@ -276,6 +306,11 @@ function MoveCube(Dir) {
 			Cube_Y_Old = Cube_Y
 			Cube_X -= 1
 			ChangeDisplayCube()
+			if (Coin_X == Cube_X) {
+				if (Coin_Y == Cube_Y) {
+					RandomizeCoin()
+				}
+			}
 			return 0
 		}
 		if (Cube_X == 0) {
@@ -283,15 +318,14 @@ function MoveCube(Dir) {
 			Cube_Y_Old = Cube_Y
 			Cube_X = 7
 			ChangeDisplayCube()
+			if (Coin_X == Cube_X) {
+				if (Coin_Y == Cube_Y) {
+					RandomizeCoin()
+				}
+			}
 			return 0
 		}
 		
-	}
-
-	if (Coin_X == Cube_X) {
-		if (Coin_Y == Cube_Y) {
-			RandomizeCoin()
-		}
 	}
 }
 
