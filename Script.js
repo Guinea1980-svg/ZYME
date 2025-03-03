@@ -203,13 +203,32 @@ function MoveCube(Dir) {
 			Cube_X_Old = Cube_X
 			Cube_Y_Old = Cube_Y
 			Cube_Y += 1
+			ChangeDisplayCube()
+			return 0
+		}
+		if (Cube_Y == 7) {
+			Cube_X_Old = Cube_X
+			Cube_Y_Old = Cube_Y
+			Cube_Y = 0
+			ChangeDisplayCube()
+			return 0
 		}
 	}
 	if (Dir == "Down") {
+		
 		if (Cube_Y != 0) {
 			Cube_X_Old = Cube_X
 			Cube_Y_Old = Cube_Y
 			Cube_Y -= 1
+			ChangeDisplayCube()
+			return 0
+		}
+		if (Cube_Y == 0) {
+			Cube_X_Old = Cube_X
+			Cube_Y_Old = Cube_Y
+			Cube_Y = 7
+			ChangeDisplayCube()
+			return 0
 		}
 		
 	}
@@ -219,6 +238,15 @@ function MoveCube(Dir) {
 			Cube_X_Old = Cube_X
 			Cube_Y_Old = Cube_Y
 			Cube_X += 1
+			ChangeDisplayCube()
+			return 0
+		}
+		if (Cube_X == 7) {
+			Cube_X_Old = Cube_X
+			Cube_Y_Old = Cube_Y
+			Cube_X = 0
+			ChangeDisplayCube()
+			return 0
 		}
 		
 	}
@@ -227,10 +255,18 @@ function MoveCube(Dir) {
 			Cube_X_Old = Cube_X
 			Cube_Y_Old = Cube_Y
 			Cube_X -= 1
+			ChangeDisplayCube()
+			return 0
+		}
+		if (Cube_X == 0) {
+			Cube_X_Old = Cube_X
+			Cube_Y_Old = Cube_Y
+			Cube_X = 7
+			ChangeDisplayCube()
+			return 0
 		}
 		
 	}
-	ChangeDisplayCube()
 	
 	
 }
