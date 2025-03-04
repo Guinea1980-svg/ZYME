@@ -33,12 +33,21 @@ document.onkeypress = function (e) {
 	}
 	prevkey = e.keyCode
 };
-
+let Cube_X_Old_5 = 0
+let Cube_Y_Old_5 = 0
+let Cube_X_Old_4 = 0
+let Cube_Y_Old_4 = 0
+let Cube_X_Old_3 = 0
+let Cube_Y_Old_3 = 0
+let Cube_X_Old_2 = 0
+let Cube_Y_Old_2 = 0
 let Cube_X_Old = 0
 let Cube_Y_Old = 0
 let Cube_X = 0
 let Cube_Y = 0
-let Cube_Char = "🟦"
+
+let Cube_Length = 1
+let Cube_Char = "🟩"
 
 let Coin_X_Old = 0
 let Coin_Y_Old = 0
@@ -47,7 +56,7 @@ let Coin_Y = 5
 let Coin_Char = "🟨"
 
 let screen = { 
- X_0_Y_0: "🟦",
+ X_0_Y_0: "🟩",
  X_0_Y_1: "⬜",
  X_0_Y_2: "⬜",
  X_0_Y_3: "⬜",
@@ -209,9 +218,11 @@ function RandomizeCoin() {
 	Coin_Y = Math.floor((Math.random() * 7) + 1);
 
 	screen[`X_${Coin_X}_Y_${Coin_Y}`] = Coin_Char
-	screen[`X_${Coin_X_Old}_Y_${Coin_Y_Old}`] = "⬜"
+	screen[`X_${Coin_X_Old}_Y_${Coin_Y_Old}`] = Cube_Char
 	document.getElementsByClassName(`X_${Coin_X}_Y_${Coin_Y}`)[0].innerHTML = screen[`X_${Coin_X}_Y_${Coin_Y}`]
 	document.getElementsByClassName(`X_${Coin_X_Old}_Y_${Coin_Y_Old}`)[0].innerHTML = screen[`X_${Coin_X_Old}_Y_${Coin_Y_Old}`]
+
+	Cube_Length += 1
 	
 }
 
@@ -220,6 +231,14 @@ function MoveCube(Dir) {
 	if (Dir == "Up") {
 
 		if (Cube_Y != 7) {
+			Cube_X_Old_5 = Cube_X_Old_4
+			Cube_Y_Old_5 = Cube_Y_Old_4
+			Cube_X_Old_4 = Cube_X_Old_3
+			Cube_Y_Old_4 = Cube_Y_Old_3
+			Cube_X_Old_3 = Cube_X_Old_2
+			Cube_Y_Old_3 = Cube_Y_Old_2
+			Cube_X_Old_2 = Cube_X_Old
+			Cube_Y_Old_2 = Cube_Y_Old
 			Cube_X_Old = Cube_X
 			Cube_Y_Old = Cube_Y
 			Cube_Y += 1
@@ -232,6 +251,14 @@ function MoveCube(Dir) {
 			return 0
 		}
 		if (Cube_Y == 7) {
+			Cube_X_Old_5 = Cube_X_Old_4
+			Cube_Y_Old_5 = Cube_Y_Old_4
+			Cube_X_Old_4 = Cube_X_Old_3
+			Cube_Y_Old_4 = Cube_Y_Old_3
+			Cube_X_Old_3 = Cube_X_Old_2
+			Cube_Y_Old_3 = Cube_Y_Old_2
+			Cube_X_Old_2 = Cube_X_Old
+			Cube_Y_Old_2 = Cube_Y_Old
 			Cube_X_Old = Cube_X
 			Cube_Y_Old = Cube_Y
 			Cube_Y = 0
@@ -247,6 +274,14 @@ function MoveCube(Dir) {
 	if (Dir == "Down") {
 		
 		if (Cube_Y != 0) {
+			Cube_X_Old_5 = Cube_X_Old_4
+			Cube_Y_Old_5 = Cube_Y_Old_4
+			Cube_X_Old_4 = Cube_X_Old_3
+			Cube_Y_Old_4 = Cube_Y_Old_3
+			Cube_X_Old_3 = Cube_X_Old_2
+			Cube_Y_Old_3 = Cube_Y_Old_2
+			Cube_X_Old_2 = Cube_X_Old
+			Cube_Y_Old_2 = Cube_Y_Old
 			Cube_X_Old = Cube_X
 			Cube_Y_Old = Cube_Y
 			Cube_Y -= 1
@@ -259,6 +294,14 @@ function MoveCube(Dir) {
 			return 0
 		}
 		if (Cube_Y == 0) {
+			Cube_X_Old_5 = Cube_X_Old_4
+			Cube_Y_Old_5 = Cube_Y_Old_4
+			Cube_X_Old_4 = Cube_X_Old_3
+			Cube_Y_Old_4 = Cube_Y_Old_3
+			Cube_X_Old_3 = Cube_X_Old_2
+			Cube_Y_Old_3 = Cube_Y_Old_2
+			Cube_X_Old_2 = Cube_X_Old
+			Cube_Y_Old_2 = Cube_Y_Old
 			Cube_X_Old = Cube_X
 			Cube_Y_Old = Cube_Y
 			Cube_Y = 7
@@ -275,6 +318,14 @@ function MoveCube(Dir) {
 	if (Dir == "Left") {
 
 		if (Cube_X != 7) {
+			Cube_X_Old_5 = Cube_X_Old_4
+			Cube_Y_Old_5 = Cube_Y_Old_4
+			Cube_X_Old_4 = Cube_X_Old_3
+			Cube_Y_Old_4 = Cube_Y_Old_3
+			Cube_X_Old_3 = Cube_X_Old_2
+			Cube_Y_Old_3 = Cube_Y_Old_2
+			Cube_X_Old_2 = Cube_X_Old
+			Cube_Y_Old_2 = Cube_Y_Old
 			Cube_X_Old = Cube_X
 			Cube_Y_Old = Cube_Y
 			Cube_X += 1
@@ -287,6 +338,14 @@ function MoveCube(Dir) {
 			return 0
 		}
 		if (Cube_X == 7) {
+			Cube_X_Old_5 = Cube_X_Old_4
+			Cube_Y_Old_5 = Cube_Y_Old_4
+			Cube_X_Old_4 = Cube_X_Old_3
+			Cube_Y_Old_4 = Cube_Y_Old_3
+			Cube_X_Old_3 = Cube_X_Old_2
+			Cube_Y_Old_3 = Cube_Y_Old_2
+			Cube_X_Old_2 = Cube_X_Old
+			Cube_Y_Old_2 = Cube_Y_Old
 			Cube_X_Old = Cube_X
 			Cube_Y_Old = Cube_Y
 			Cube_X = 0
@@ -302,6 +361,14 @@ function MoveCube(Dir) {
 	}
 	if (Dir == "Right") {
 		if (Cube_X != 0) {
+			Cube_X_Old_5 = Cube_X_Old_4
+			Cube_Y_Old_5 = Cube_Y_Old_4
+			Cube_X_Old_4 = Cube_X_Old_3
+			Cube_Y_Old_4 = Cube_Y_Old_3
+			Cube_X_Old_3 = Cube_X_Old_2
+			Cube_Y_Old_3 = Cube_Y_Old_2
+			Cube_X_Old_2 = Cube_X_Old
+			Cube_Y_Old_2 = Cube_Y_Old
 			Cube_X_Old = Cube_X
 			Cube_Y_Old = Cube_Y
 			Cube_X -= 1
@@ -314,6 +381,14 @@ function MoveCube(Dir) {
 			return 0
 		}
 		if (Cube_X == 0) {
+			Cube_X_Old_5 = Cube_X_Old_4
+			Cube_Y_Old_5 = Cube_Y_Old_4
+			Cube_X_Old_4 = Cube_X_Old_3
+			Cube_Y_Old_4 = Cube_Y_Old_3
+			Cube_X_Old_3 = Cube_X_Old_2
+			Cube_Y_Old_3 = Cube_Y_Old_2
+			Cube_X_Old_2 = Cube_X_Old
+			Cube_Y_Old_2 = Cube_Y_Old
 			Cube_X_Old = Cube_X
 			Cube_Y_Old = Cube_Y
 			Cube_X = 7
@@ -330,11 +405,36 @@ function MoveCube(Dir) {
 }
 
 function ChangeDisplayCube() {
+
 	
 	document.getElementsByClassName(`X_${Cube_X}_Y_${Cube_Y}`)[0].innerHTML = Cube_Char
 	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
-	screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "⬜"
-	document.getElementsByClassName(`X_${Cube_X_Old}_Y_${Cube_Y_Old}`)[0].innerHTML = screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`]
+	if (Cube_Length == 1) {
+		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "⬜"
+	}
+	if (Cube_Length == 2) {
+		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
+		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "⬜"
+	}
+	if (Cube_Length == 3) {
+		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
+		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
+		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "⬜"
+	}
+	if (Cube_Length == 4) {
+		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
+		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
+		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
+		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
+	}
+	if (Cube_Length >= 5) {
+		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
+		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
+		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
+		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
+		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
+	}
+	Update()
 	
 	
 }
