@@ -33,6 +33,16 @@ document.onkeypress = function (e) {
 	}
 	prevkey = e.keyCode
 };
+let Cube_X_Old_10 = 0
+let Cube_Y_Old_10 = 0
+let Cube_X_Old_9 = 0
+let Cube_Y_Old_9 = 0
+let Cube_X_Old_8 = 0
+let Cube_Y_Old_8 = 0
+let Cube_X_Old_7 = 0
+let Cube_Y_Old_7 = 0
+let Cube_X_Old_6 = 0
+let Cube_Y_Old_6 = 0
 let Cube_X_Old_5 = 0
 let Cube_Y_Old_5 = 0
 let Cube_X_Old_4 = 0
@@ -427,12 +437,62 @@ function ChangeDisplayCube() {
 		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
 		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
 	}
-	if (Cube_Length >= 5) {
+	if (Cube_Length == 5) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
 		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
 		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
 		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
 		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
+	}
+	if (Cube_Length == 6) {
+		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
+		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
+		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
+		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
+		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
+		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
+	}
+	if (Cube_Length == 6) {
+		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
+		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
+		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
+		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
+		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
+		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
+		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
+	}
+	if (Cube_Length == 7) {
+		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
+		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
+		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
+		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
+		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
+		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
+		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "🟩"
+		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
+	}
+	if (Cube_Length == 9) {
+		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
+		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
+		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
+		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
+		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
+		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
+		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "🟩"
+		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "🟩"
+		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
+	}
+	if (Cube_Length == 10) {
+		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
+		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
+		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
+		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
+		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
+		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
+		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "🟩"
+		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "🟩"
+		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "🟩"
+		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	Update()
 	
