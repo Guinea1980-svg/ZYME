@@ -371,19 +371,16 @@ function Reset() {
 	Cube_X = 0
 	Cube_Y = 0
 	
-	Cube_Length = 1
-
-	screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "⬜"
-	screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "⬜"
-	screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "⬜"
-	screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
-	screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
-	screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
-	screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
-	screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
-	screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
-	screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
-
+	Cube_Length = 1	
+	
+	for (let i = 0; i == 8; i++) {
+		for (let n = 0; n == 8; n++) {
+  			screen[`X_${i}_Y_${n}`] = "⬛"
+		}	
+	}
+	setTimeout(for (let i = 0; i == 8; i++) {for (let n = 0; n == 8; n++) {screen[`X_${i}_Y_${n}`] = "⬜"}	}, 5000)
+	
+	
 	RandomizeCoin()
 
 
