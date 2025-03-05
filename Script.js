@@ -1,8 +1,9 @@
-let Version = "1.09"
+let Version = "1.1"
 
 console.log("Version: " + Version)
 
 let prevkey 
+let Direction = "Left"
 
 document.onkeypress = function (e) {
 	e = e || window.event;
@@ -13,27 +14,27 @@ document.onkeypress = function (e) {
 			window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/guyinsuite.webp"
 		
 		}
-		
 	}
-    	if (e.keyCode == 119) {
-		MoveCube("Down")
+    if (e.keyCode == 119) {
+		Direction = "Down"
 		
 	}
 	if (e.keyCode == 97) {
-		MoveCube("Right")
+		Direction = "Right"
 		
 	}
 	if (e.keyCode == 115) {
-		MoveCube("Up")
+		Direction = "Up"
 		
 	}
 	if (e.keyCode == 100) {
-		MoveCube("Left")
+		Direction = "Left"
 		
 	}
 	prevkey = e.keyCode
 };
-
+let Cube_X_Old_11 = 0
+let Cube_Y_Old_11 = 0
 let Cube_X_Old_10 = 0
 let Cube_Y_Old_10 = 0
 let Cube_X_Old_9 = 0
@@ -238,7 +239,7 @@ function RandomizeCoin() {
   		Coin_X = Math.floor((Math.random() * 7) + 1);
 		Coin_Y = Math.floor((Math.random() * 7) + 1);
 
-		if (screen[`X_${Coin_X}_Y_${Coin_Y}`] != Cube_Body) {
+		if (screen[`X_${Coin_X}_Y_${Coin_Y}`] != Cube_Body || screen[`X_${Coin_X}_Y_${Coin_Y}`] != Cube_Body  )  {
 			
 			screen[`X_${Coin_X}_Y_${Coin_Y}`] = Coin_Char
 			
@@ -250,56 +251,20 @@ function RandomizeCoin() {
 
 			Valid = true
 
+			Cube_Length += 1
+
 			return 0
 			
 			
 		}
-		if (screen[`X_${Coin_X}_Y_${Coin_Y}`] != Cube_Char) {
-			
-			screen[`X_${Coin_X}_Y_${Coin_Y}`] = Coin_Char
-			
-			screen[`X_${Coin_X_Old}_Y_${Coin_Y_Old}`] = Cube_Char
-			
-			document.getElementsByClassName(`X_${Coin_X}_Y_${Coin_Y}`)[0].innerHTML = screen[`X_${Coin_X}_Y_${Coin_Y}`]
-			
-			document.getElementsByClassName(`X_${Coin_X_Old}_Y_${Coin_Y_Old}`)[0].innerHTML = screen[`X_${Coin_X_Old}_Y_${Coin_Y_Old}`]
 
-			Valid = true
-			
-			return 0
-			
-		}
-		if (Coin_X_Old != Coin_X ) {
-			if (Coin_Y_Old != Coin_Y ) {
-			
-				screen[`X_${Coin_X}_Y_${Coin_Y}`] = Coin_Char
-			
-				screen[`X_${Coin_X_Old}_Y_${Coin_Y_Old}`] = Cube_Char
-			
-				document.getElementsByClassName(`X_${Coin_X}_Y_${Coin_Y}`)[0].innerHTML = screen[`X_${Coin_X}_Y_${Coin_Y}`]
-			
-				document.getElementsByClassName(`X_${Coin_X_Old}_Y_${Coin_Y_Old}`)[0].innerHTML = screen[`X_${Coin_X_Old}_Y_${Coin_Y_Old}`]
-
-				Valid = true
-
-				return 0
-			
-		}
-		
 	}	
-
-	screen[`X_${Coin_X}_Y_${Coin_Y}`] = Coin_Char
-	screen[`X_${Coin_X_Old}_Y_${Coin_Y_Old}`] = Cube_Char
-	document.getElementsByClassName(`X_${Coin_X}_Y_${Coin_Y}`)[0].innerHTML = screen[`X_${Coin_X}_Y_${Coin_Y}`]
-	document.getElementsByClassName(`X_${Coin_X_Old}_Y_${Coin_Y_Old}`)[0].innerHTML = screen[`X_${Coin_X_Old}_Y_${Coin_Y_Old}`]
-
-	Cube_Length += 1
 	
 };
 
 function LogCubeHistory() {
 	
-	Cube_X_Old_10 = Cube_X_Old_9
+	Cube_X_Old_11 = Cube_X_Old_10
 	Cube_Y_Old_10 = Cube_Y_Old_9
 	Cube_X_Old_9 = Cube_X_Old_8
 	Cube_Y_Old_9 = Cube_Y_Old_8
@@ -328,7 +293,25 @@ function CheckForCoin() {
 			RandomizeCoin()
 		}
 	}
+	if (screen[`X_${Cube_X}_Y_${Cube_Y}`] == Cube_Body) {
+		console.log("Died")
+		Reset()
+		return true
+	}
 };
+
+function Reset() {
+
+	Cube_X = 0
+	Cube_Y = 0
+	
+	Cube_Length = 0
+
+	RandomizeCoin()
+
+
+}
+
 
 function MoveCube(Dir) {
 	
@@ -415,23 +398,65 @@ function ChangeDisplayCube() {
 	
 	document.getElementsByClassName(`X_${Cube_X}_Y_${Cube_Y}`)[0].innerHTML = Cube_Char
 	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
+	if (Cube_Length == 0) {
+		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "⬜"
+		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "⬜"
+		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "⬜"
+		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
+		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
+		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
+		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
+		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
+		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
+		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
+	}
 	if (Cube_Length == 1) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "⬜"
+		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "⬜"
+		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "⬜"
+		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
+		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
+		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
+		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
+		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
+		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
+		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 2) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
 		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "⬜"
+		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "⬜"
+		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
+		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
+		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
+		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
+		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
+		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
+		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 3) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
 		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
 		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "⬜"
+		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
+		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
+		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
+		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
+		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
+		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
+		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 4) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
 		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
 		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
 		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
+		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
+		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
+		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
+		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
+		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
+		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 5) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
@@ -439,6 +464,11 @@ function ChangeDisplayCube() {
 		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
 		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
 		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
+		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
+		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
+		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
+		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
+		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 6) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
@@ -447,15 +477,10 @@ function ChangeDisplayCube() {
 		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
 		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
 		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
-	}
-	if (Cube_Length == 6) {
-		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
-		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
-		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
-		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
-		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
-		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
 		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
+		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
+		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
+		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 7) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
@@ -464,8 +489,22 @@ function ChangeDisplayCube() {
 		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
 		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
 		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
+		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
+		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
+		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
+		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
+	}
+	if (Cube_Length == 8) {
+		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
+		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
+		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
+		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
+		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
+		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
 		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "🟩"
 		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
+		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
+		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 9) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
@@ -477,8 +516,9 @@ function ChangeDisplayCube() {
 		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "🟩"
 		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "🟩"
 		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
+		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
-	if (Cube_Length == 10) {
+	if (Cube_Length >= 10) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
 		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
 		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
@@ -491,7 +531,8 @@ function ChangeDisplayCube() {
 		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	Update()
-	
+	screen[`X_${Coin_X}_Y_${Coin_Y}`] = "🟨"
+	setTimeout(function(){MoveCube(Direction)}, 125);
 	
 };
 
@@ -515,18 +556,4 @@ function NewTabLink(url) {
 	window.open(url, '_blank').focus();
 };
 
-
-
-function download(file, text) {
-
-        //creating an invisible element
-        let element = document.createElement('a');
-        element.setAttribute('href',
-            'data:text/plain;charset=utf-8, '
-            + encodeURIComponent(text));
-        element.setAttribute('download', file);
-        document.body.appendChild(element);
-        element.click();
-
-	document.body.removeChild(element);
-};
+setTimeout(function(){MoveCube(Direction)}, 125);
