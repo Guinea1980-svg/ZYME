@@ -305,7 +305,18 @@ function Reset() {
 	Cube_X = 0
 	Cube_Y = 0
 	
-	Cube_Length = 0
+	Cube_Length = 1
+
+	screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "⬜"
+	screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "⬜"
+	screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "⬜"
+	screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
+	screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
+	screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
+	screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
+	screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
+	screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
+	screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 
 	RandomizeCoin()
 
@@ -398,65 +409,23 @@ function ChangeDisplayCube() {
 	
 	document.getElementsByClassName(`X_${Cube_X}_Y_${Cube_Y}`)[0].innerHTML = Cube_Char
 	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
-	if (Cube_Length == 0) {
-		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "⬜"
-		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "⬜"
-		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "⬜"
-		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
-		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
-		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
-		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
-		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
-		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
-		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
-	}
 	if (Cube_Length == 1) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "⬜"
-		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "⬜"
-		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "⬜"
-		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
-		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
-		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
-		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
-		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
-		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
-		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 2) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
 		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "⬜"
-		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "⬜"
-		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
-		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
-		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
-		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
-		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
-		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
-		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 3) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
 		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
 		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "⬜"
-		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
-		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
-		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
-		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
-		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
-		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
-		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 4) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
 		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
 		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
 		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
-		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
-		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
-		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
-		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
-		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
-		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 5) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
@@ -464,11 +433,6 @@ function ChangeDisplayCube() {
 		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
 		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
 		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
-		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
-		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
-		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
-		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
-		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 6) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
@@ -477,10 +441,6 @@ function ChangeDisplayCube() {
 		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
 		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
 		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
-		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
-		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
-		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
-		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 7) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
@@ -490,9 +450,6 @@ function ChangeDisplayCube() {
 		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
 		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
 		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
-		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
-		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
-		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 8) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
@@ -503,8 +460,6 @@ function ChangeDisplayCube() {
 		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
 		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "🟩"
 		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
-		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
-		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length == 9) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
@@ -516,7 +471,6 @@ function ChangeDisplayCube() {
 		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "🟩"
 		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "🟩"
 		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
-		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	if (Cube_Length >= 10) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
