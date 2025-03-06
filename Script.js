@@ -211,7 +211,85 @@ let screen = {
  X_7_Y_7: "⬜",
 }
 
+function MoveCube(Dir) {
+	
+	if (Dir == "Up") {
 
+		if (Cube_Y != 7) {
+			LogCubeHistory()
+			
+			Cube_Y += 1
+			
+			ChangeDisplayCube()
+			CheckForCoin()
+			return 0
+		}
+		if (Cube_Y == 7) {
+			
+			LogCubeHistory()
+			
+			Cube_Y = 0
+			
+			ChangeDisplayCube()
+			
+			CheckForCoin()
+			return 0
+		}
+	}
+	if (Dir == "Down") {
+		
+		if (Cube_Y != 0) {
+			LogCubeHistory()
+			Cube_Y -= 1
+			ChangeDisplayCube()
+			CheckForCoin()
+			return 0
+		}
+		if (Cube_Y == 0) {
+			LogCubeHistory()
+			Cube_Y = 7
+			ChangeDisplayCube()
+			CheckForCoin()
+			return 0
+		}
+		
+	}
+	if (Dir == "Left") {
+
+		if (Cube_X != 7) {
+			LogCubeHistory()
+			Cube_X += 1
+			ChangeDisplayCube()
+			CheckForCoin()
+			return 0
+		}
+		if (Cube_X == 7) {
+			LogCubeHistory()
+			Cube_X = 0
+			ChangeDisplayCube()
+			CheckForCoin()
+			return 0
+		}
+		
+	}
+	if (Dir == "Right") {
+		if (Cube_X != 0) {
+			LogCubeHistory()
+			Cube_X -= 1
+			ChangeDisplayCube()
+			CheckForCoin()
+			return 0
+		}
+		if (Cube_X == 0) {
+			LogCubeHistory()
+			Cube_X = 7
+			ChangeDisplayCube()
+			CheckForCoin()
+			return 0
+		}
+		
+	}
+};
 
 function Update() {
 	
@@ -381,86 +459,6 @@ function Reset() {
 }
 
 
-function MoveCube(Dir) {
-	
-	if (Dir == "Up") {
-
-		if (Cube_Y != 7) {
-			LogCubeHistory()
-			
-			Cube_Y += 1
-			
-			ChangeDisplayCube()
-			CheckForCoin()
-			return 0
-		}
-		if (Cube_Y == 7) {
-			
-			LogCubeHistory()
-			
-			Cube_Y = 0
-			
-			ChangeDisplayCube()
-			
-			CheckForCoin()
-			return 0
-		}
-	}
-	if (Dir == "Down") {
-		
-		if (Cube_Y != 0) {
-			LogCubeHistory()
-			Cube_Y -= 1
-			ChangeDisplayCube()
-			CheckForCoin()
-			return 0
-		}
-		if (Cube_Y == 0) {
-			LogCubeHistory()
-			Cube_Y = 7
-			ChangeDisplayCube()
-			CheckForCoin()
-			return 0
-		}
-		
-	}
-	if (Dir == "Left") {
-
-		if (Cube_X != 7) {
-			LogCubeHistory()
-			Cube_X += 1
-			ChangeDisplayCube()
-			CheckForCoin()
-			return 0
-		}
-		if (Cube_X == 7) {
-			LogCubeHistory()
-			Cube_X = 0
-			ChangeDisplayCube()
-			CheckForCoin()
-			return 0
-		}
-		
-	}
-	if (Dir == "Right") {
-		if (Cube_X != 0) {
-			LogCubeHistory()
-			Cube_X -= 1
-			ChangeDisplayCube()
-			CheckForCoin()
-			return 0
-		}
-		if (Cube_X == 0) {
-			LogCubeHistory()
-			Cube_X = 7
-			ChangeDisplayCube()
-			CheckForCoin()
-			return 0
-		}
-		
-	}
-};
-
 function ChangeDisplayCube() {
 
 	
@@ -566,5 +564,6 @@ function NewTabLink(url) {
 
 	window.open(url, '_blank').focus();
 };
-
-setTimeout(function(){MoveCube(Direction)}, 125);
+if (window.location.href == "https://guinea1980-svg.github.io/ZYME/Snake.html") {
+	setTimeout(function(){MoveCube(Direction)}, 125);
+}
