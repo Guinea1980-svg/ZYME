@@ -123,6 +123,7 @@ let Cube_X_Old = 0
 let Cube_Y_Old = 0
 let Cube_X = 0
 let Cube_Y = 0
+let Cube_Speed = 125
 
 let Cube_Length = 1
 let Cube_Char = "🟦"
@@ -135,6 +136,12 @@ let Coin_Y_Old = 0
 let Coin_X = 2
 let Coin_Y = 5
 let Coin_Char = "🟨"
+
+let Speed_X_Old = 0
+let Speed_Y_Old = 0
+let Speed_X = 1
+let Speed_Y = 4
+let Speed_Char = "🟥"
 
 let screen = { 
  X_0_Y_0: Cube_Char,
@@ -383,7 +390,7 @@ function RandomizeCoin() {
   		Coin_X = Math.floor((Math.random() * 7) + 1);
 		Coin_Y = Math.floor((Math.random() * 7) + 1);
 
-		if (screen[`X_${Coin_X}_Y_${Coin_Y}`] != Cube_Body || screen[`X_${Coin_X}_Y_${Coin_Y}`] != Cube_Body  )  {
+		if (screen[`X_${Coin_X}_Y_${Coin_Y}`] != Cube_Body || screen[`X_${Coin_X}_Y_${Coin_Y}`] != Cube_Char  )  {
 			
 			screen[`X_${Coin_X}_Y_${Coin_Y}`] = Coin_Char
 			
@@ -396,6 +403,42 @@ function RandomizeCoin() {
 			Valid = true
 
 			Cube_Length += 1
+			Cube_Speed = 125
+
+			return 0
+			
+			
+		}
+
+	}	
+	
+};
+function RandomizeSpeed() {
+	
+	Speed_X_Old = Speed_X
+	Speed_Y_Old = Speed_Y
+	
+
+
+	let Valid = false
+	
+	while (Valid == false) {
+  		Speed_X = Math.floor((Math.random() * 7) + 1);
+		Speed_Y = Math.floor((Math.random() * 7) + 1);
+
+		if (screen[`X_${Speed_X}_Y_${Speed_Y}`] != Cube_Body || screen[`X_${Speed_X}_Y_${Speed_Y}`] != Cube_Char  )  {
+			
+			screen[`X_${Speee_X}_Y_${Speed_Y}`] = Speeed_Char
+			
+			screen[`X_${Speed_X_Old}_Y_${Speed_Y_Old}`] = Cube_Char
+			
+			document.getElementsByClassName(`X_${Speed_X}_Y_${Speed_Y}`)[0].innerHTML = screen[`X_${Speed_X}_Y_${Speed_Y}`]
+			
+			document.getElementsByClassName(`X_${Speed_X_Old}_Y_${Speed_Y_Old}`)[0].innerHTML = screen[`X_${Speed_X_Old}_Y_${Speed_Y_Old}`]
+
+			Valid = true
+
+			Cube_Speed = 50
 
 			return 0
 			
@@ -435,6 +478,11 @@ function CheckForCoin() {
 	if (Coin_X == Cube_X) {
 		if (Coin_Y == Cube_Y) {		
 			RandomizeCoin()
+		}
+	}
+	if (Speed_X == Cube_X) {
+		if (Speed_Y == Cube_Y) {		
+			RandomizeSpeed()
 		}
 	}
 	if (screen[`X_${Cube_X}_Y_${Cube_Y}`] == Cube_Body) {
@@ -668,7 +716,7 @@ function ChangeDisplayCube() {
 		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
 	}
 	Update()
-	setTimeout(function(){MoveCube(Direction)}, 125);
+	setTimeout(function(){MoveCube(Direction)}, Cube_Speed);
 	
 };
 
@@ -692,5 +740,5 @@ function NewTabLink(url) {
 	window.open(url, '_blank').focus();
 };
 if (window.location.href == "https://guinea1980-svg.github.io/ZYME/Snake.html") {
-	setTimeout(function(){MoveCube(Direction)}, 125);
+	setTimeout(function(){MoveCube(Direction)}, Cube_Speed);
 }
