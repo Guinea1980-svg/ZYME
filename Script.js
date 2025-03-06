@@ -449,9 +449,74 @@ function Reset() {
 	Cube_X = 0
 	Cube_Y = 0
 	
-	Cube_Length = 1	
+	Cube_Length = 1
+
+	Direction = "Left"
+
+	screen["X_0_Y_0"] = "⬜"
+	screen["X_1_Y_0"] = "⬜"
+	screen["X_2_Y_0"] = "⬜"
+	screen["X_3_Y_0"] = "⬜"
+	screen["X_4_Y_0"] = "⬜"
+	screen["X_5_Y_0"] = "⬜"
+	screen["X_6_Y_0"] = "⬜"
+	screen["X_7_Y_0"] = "⬜"
+
+	screen["X_0_Y_1"] = "⬜"
+	screen["X_1_Y_1"] = "⬜"
+	screen["X_2_Y_1"] = "⬜"
+	screen["X_3_Y_1"] = "⬜"
+	screen["X_4_Y_1"] = "⬜"
+	screen["X_5_Y_1"] = "⬜"
+	screen["X_6_Y_1"] = "⬜"
+	screen["X_7_Y_1"] = "⬜"
+
+	screen["X_0_Y_3"] = "⬜"
+	screen["X_1_Y_3"] = "⬜"
+	screen["X_2_Y_3"] = "⬜"
+	screen["X_3_Y_3"] = "⬜"
+	screen["X_4_Y_3"] = "⬜"
+	screen["X_5_Y_3"] = "⬜"
+	screen["X_6_Y_3"] = "⬜"
+	screen["X_7_Y_3"] = "⬜"
+
+	screen["X_0_Y_4"] = "⬜"
+	screen["X_1_Y_4"] = "⬜"
+	screen["X_2_Y_4"] = "⬜"
+	screen["X_3_Y_4"] = "⬜"
+	screen["X_4_Y_4"] = "⬜"
+	screen["X_5_Y_4"] = "⬜"
+	screen["X_6_Y_4"] = "⬜"
+	screen["X_7_Y_4"] = "⬜"
+
+	screen["X_0_Y_5"] = "⬜"
+	screen["X_1_Y_5"] = "⬜"
+	screen["X_2_Y_5"] = "⬜"
+	screen["X_3_Y_5"] = "⬜"
+	screen["X_4_Y_5"] = "⬜"
+	screen["X_5_Y_5"] = "⬜"
+	screen["X_6_Y_5"] = "⬜"
+	screen["X_7_Y_5"] = "⬜"
+
+	screen["X_0_Y_6"] = "⬜"
+	screen["X_1_Y_6"] = "⬜"
+	screen["X_2_Y_6"] = "⬜"
+	screen["X_3_Y_6"] = "⬜"
+	screen["X_4_Y_6"] = "⬜"
+	screen["X_5_Y_6"] = "⬜"
+	screen["X_6_Y_6"] = "⬜"
+	screen["X_7_Y_6"] = "⬜"
+
+	screen["X_0_Y_7"] = "⬜"
+	screen["X_1_Y_7"] = "⬜"
+	screen["X_2_Y_7"] = "⬜"
+	screen["X_3_Y_7"] = "⬜"
+	screen["X_4_Y_7"] = "⬜"
+	screen["X_5_Y_7"] = "⬜"
+	screen["X_6_Y_7"] = "⬜"
+	screen["X_7_Y_7"] = "⬜"
 	
-	
+	Update()
 	
 	RandomizeCoin()
 
@@ -464,6 +529,68 @@ function ChangeDisplayCube() {
 	
 	document.getElementsByClassName(`X_${Cube_X}_Y_${Cube_Y}`)[0].innerHTML = Cube_Char
 	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
+		screen["X_0_Y_0"] = "⬜"
+	screen["X_1_Y_0"] = "⬜"
+	screen["X_2_Y_0"] = "⬜"
+	screen["X_3_Y_0"] = "⬜"
+	screen["X_4_Y_0"] = "⬜"
+	screen["X_5_Y_0"] = "⬜"
+	screen["X_6_Y_0"] = "⬜"
+	screen["X_7_Y_0"] = "⬜"
+
+	screen["X_0_Y_1"] = "⬜"
+	screen["X_1_Y_1"] = "⬜"
+	screen["X_2_Y_1"] = "⬜"
+	screen["X_3_Y_1"] = "⬜"
+	screen["X_4_Y_1"] = "⬜"
+	screen["X_5_Y_1"] = "⬜"
+	screen["X_6_Y_1"] = "⬜"
+	screen["X_7_Y_1"] = "⬜"
+
+	screen["X_0_Y_3"] = "⬜"
+	screen["X_1_Y_3"] = "⬜"
+	screen["X_2_Y_3"] = "⬜"
+	screen["X_3_Y_3"] = "⬜"
+	screen["X_4_Y_3"] = "⬜"
+	screen["X_5_Y_3"] = "⬜"
+	screen["X_6_Y_3"] = "⬜"
+	screen["X_7_Y_3"] = "⬜"
+
+	screen["X_0_Y_4"] = "⬜"
+	screen["X_1_Y_4"] = "⬜"
+	screen["X_2_Y_4"] = "⬜"
+	screen["X_3_Y_4"] = "⬜"
+	screen["X_4_Y_4"] = "⬜"
+	screen["X_5_Y_4"] = "⬜"
+	screen["X_6_Y_4"] = "⬜"
+	screen["X_7_Y_4"] = "⬜"
+
+	screen["X_0_Y_5"] = "⬜"
+	screen["X_1_Y_5"] = "⬜"
+	screen["X_2_Y_5"] = "⬜"
+	screen["X_3_Y_5"] = "⬜"
+	screen["X_4_Y_5"] = "⬜"
+	screen["X_5_Y_5"] = "⬜"
+	screen["X_6_Y_5"] = "⬜"
+	screen["X_7_Y_5"] = "⬜"
+
+	screen["X_0_Y_6"] = "⬜"
+	screen["X_1_Y_6"] = "⬜"
+	screen["X_2_Y_6"] = "⬜"
+	screen["X_3_Y_6"] = "⬜"
+	screen["X_4_Y_6"] = "⬜"
+	screen["X_5_Y_6"] = "⬜"
+	screen["X_6_Y_6"] = "⬜"
+	screen["X_7_Y_6"] = "⬜"
+
+	screen["X_0_Y_7"] = "⬜"
+	screen["X_1_Y_7"] = "⬜"
+	screen["X_2_Y_7"] = "⬜"
+	screen["X_3_Y_7"] = "⬜"
+	screen["X_4_Y_7"] = "⬜"
+	screen["X_5_Y_7"] = "⬜"
+	screen["X_6_Y_7"] = "⬜"
+	screen["X_7_Y_7"] = "⬜"
 	if (Cube_Length == 1) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "⬜"
 	}
