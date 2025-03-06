@@ -373,12 +373,6 @@ function Reset() {
 	
 	Cube_Length = 1	
 	
-	for (let i = 0; i == 8; i++) {
-		for (let n = 0; n == 8; n++) {
-  			screen[`X_${i}_Y_${n}`] = "⬛"
-		}	
-	}
-	setTimeout(for (let i = 0; i == 8; i++) {for (let n = 0; n == 8; n++) {screen[`X_${i}_Y_${n}`] = "⬜"}	}, 5000)
 	
 	
 	RandomizeCoin()
