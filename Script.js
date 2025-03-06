@@ -518,9 +518,7 @@ function Reset() {
 	
 	Update()
 	
-	setTimeout(function(){RandomizeCoin()}, 1000);
-
-	return 0
+	setTimeout(function(){RandomizeCoin()}, 5000);
 
 
 }
