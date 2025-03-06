@@ -73,7 +73,7 @@ let Direction = "Left"
 
 document.onkeypress = function (e) {
 	e = e || window.event;
-	console.log(e.keyCode)
+	console.log(e)
 	let prevkey
 	if (prevkey == 112) {
 		if (e.keyCode == 100) {
@@ -81,19 +81,19 @@ document.onkeypress = function (e) {
 		
 		}
 	}
-    if (e.keyCode == 119) {
+    if (e.key == "w") {
 		Direction = "Down"
 		
 	}
-	if (e.keyCode == 97) {
+	if (e.key == "a") {
 		Direction = "Right"
 		
 	}
-	if (e.keyCode == 115) {
+	if (e.key == "s") {
 		Direction = "Up"
 		
 	}
-	if (e.keyCode == 100) {
+	if (e.key == "d") {
 		Direction = "Left"
 		
 	}
