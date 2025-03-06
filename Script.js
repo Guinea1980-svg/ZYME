@@ -520,6 +520,8 @@ function Reset() {
 	
 	setTimeout(function(){RandomizeCoin()}, 1000);
 
+	return 0
+
 
 }
 
