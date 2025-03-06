@@ -1,4 +1,4 @@
-let Version = "1.11"
+let Version = "1.12"
 
 console.log("Version: " + Version)
 
