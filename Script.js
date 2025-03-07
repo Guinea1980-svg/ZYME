@@ -271,7 +271,7 @@ function MoveCube(Dir) {
 	
 	if (Dir == "Up") {
 
-		if (Cube_Y != 7) {
+		if (Cube_Y != 10) {
 			LogCubeHistory()
 			
 			Cube_Y += 1
@@ -280,7 +280,7 @@ function MoveCube(Dir) {
 			CheckForCoin()
 			return 0
 		}
-		if (Cube_Y == 7) {
+		if (Cube_Y == 10) {
 			
 			LogCubeHistory()
 			
@@ -303,7 +303,7 @@ function MoveCube(Dir) {
 		}
 		if (Cube_Y == 0) {
 			LogCubeHistory()
-			Cube_Y = 7
+			Cube_Y = 10
 			ChangeDisplayCube()
 			CheckForCoin()
 			return 0
@@ -312,14 +312,14 @@ function MoveCube(Dir) {
 	}
 	if (Dir == "Left") {
 
-		if (Cube_X != 7) {
+		if (Cube_X != 10) {
 			LogCubeHistory()
 			Cube_X += 1
 			ChangeDisplayCube()
 			CheckForCoin()
 			return 0
 		}
-		if (Cube_X == 7) {
+		if (Cube_X == 10) {
 			LogCubeHistory()
 			Cube_X = 0
 			ChangeDisplayCube()
@@ -338,7 +338,7 @@ function MoveCube(Dir) {
 		}
 		if (Cube_X == 0) {
 			LogCubeHistory()
-			Cube_X = 7
+			Cube_X = 10
 			ChangeDisplayCube()
 			CheckForCoin()
 			return 0
