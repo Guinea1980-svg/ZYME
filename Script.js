@@ -1,4 +1,4 @@
-let Version = "1.2"
+let Version = "1.21"
 
 console.log("Version: " + Version)
 
@@ -603,7 +603,7 @@ function RandomizeSlow() {
 
 			Valid = true
 
-			Cube_Slow = 200
+			Cube_Speed = 250
 
 			return 0
 			
