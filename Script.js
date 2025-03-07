@@ -133,20 +133,20 @@ let Empty = "⬜"
 
 let Coin_X_Old = 0
 let Coin_Y_Old = 0
-let Coin_X = 2
-let Coin_Y = 5
+let Coin_X = Math.floor((Math.random() * 10));
+let Coin_Y = Math.floor((Math.random() * 10));
 let Coin_Char = "🟨"
 
 let Speed_X_Old = 0
 let Speed_Y_Old = 0
-let Speed_X = 1
-let Speed_Y = 4
+let Speed_X = Math.floor((Math.random() * 10));
+let Speed_Y = Math.floor((Math.random() * 10));
 let Speed_Char = "🟥"
 
 let Slow_X_Old = 0
 let Slow_Y_Old = 0
-let Slow_X = 8
-let Slow_Y = 6
+let Slow_X = Math.floor((Math.random() * 10));
+let Slow_Y = Math.floor((Math.random() * 10));
 let Slow_Char = "🟪"
 
 let screen = { 
@@ -167,7 +167,7 @@ let screen = {
  X_1_Y_1: "⬜",
  X_1_Y_2: "⬜",
  X_1_Y_3: "⬜",
- X_1_Y_4: Speed_Char,
+ X_1_Y_4: "⬜",
  X_1_Y_5: "⬜",
  X_1_Y_6: "⬜",
  X_1_Y_7: "⬜",
@@ -180,7 +180,7 @@ let screen = {
  X_2_Y_2: "⬜",
  X_2_Y_3: "⬜",
  X_2_Y_4: "⬜",
- X_2_Y_5: Coin_Char,
+ X_2_Y_5: "⬜",
  X_2_Y_6: "⬜",
  X_2_Y_7: "⬜",
  X_2_Y_8: "⬜",
@@ -253,7 +253,7 @@ let screen = {
  X_8_Y_3: "⬜",
  X_8_Y_4: "⬜",
  X_8_Y_5: "⬜",
- X_8_Y_6: Slow_Char,
+ X_8_Y_6: "⬜",
  X_8_Y_7: "⬜",
  X_8_Y_8: "⬜",
  X_8_Y_9: "⬜",
