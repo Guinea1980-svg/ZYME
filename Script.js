@@ -508,8 +508,8 @@ function RandomizeCoin() {
 	let Valid = false
 	
 	while (Valid == false) {
-  		Coin_X = Math.floor((Math.random() * 7) + 1);
-		Coin_Y = Math.floor((Math.random() * 7) + 1);
+  		Coin_X = Math.floor((Math.random() * 10));
+		Coin_Y = Math.floor((Math.random() * 10));
 
 		if (screen[`X_${Coin_X}_Y_${Coin_Y}`] != Cube_Body || screen[`X_${Coin_X}_Y_${Coin_Y}`] != Cube_Char  )  {
 			
@@ -544,12 +544,12 @@ function RandomizeSpeed() {
 	let Valid = false
 	
 	while (Valid == false) {
-  		Speed_X = Math.floor((Math.random() * 7) + 1);
-		Speed_Y = Math.floor((Math.random() * 7) + 1);
+  		Speed_X = Math.floor((Math.random() * 10));
+		Speed_Y = Math.floor((Math.random() * 10));
 
 		if (screen[`X_${Speed_X}_Y_${Speed_Y}`] != Cube_Body || screen[`X_${Speed_X}_Y_${Speed_Y}`] != Cube_Char  )  {
 			
-			screen[`X_${Speee_X}_Y_${Speed_Y}`] = Speeed_Char
+			screen[`X_${Speed_X}_Y_${Speed_Y}`] = Speed_Char
 			
 			screen[`X_${Speed_X_Old}_Y_${Speed_Y_Old}`] = Cube_Char
 			
