@@ -1,4 +1,4 @@
-let Version = "1.16"
+let Version = "1.17"
 
 console.log("Version: " + Version)
 
@@ -693,6 +693,42 @@ function Reset() {
 	screen["X_5_Y_7"] = "⬛"
 	screen["X_6_Y_7"] = "⬛"
 	screen["X_7_Y_7"] = "⬛"
+
+	screen["X_0_Y_8"] = "⬛"
+	screen["X_1_Y_8"] = "⬛"
+	screen["X_2_Y_8"] = "⬛"
+	screen["X_3_Y_8"] = "⬛"
+	screen["X_4_Y_8"] = "⬛"
+	screen["X_5_Y_8"] = "⬛"
+	screen["X_6_Y_8"] = "⬛"
+	screen["X_7_Y_8"] = "⬛"
+	screen["X_8_Y_8"] = "⬛"
+	screen["X_9_Y_8"] = "⬛"
+	screen["X_10_Y_8"] = "⬛"
+
+	screen["X_0_Y_9"] = "⬛"
+	screen["X_1_Y_9"] = "⬛"
+	screen["X_2_Y_9"] = "⬛"
+	screen["X_3_Y_9"] = "⬛"
+	screen["X_4_Y_9"] = "⬛"
+	screen["X_5_Y_9"] = "⬛"
+	screen["X_6_Y_9"] = "⬛"
+	screen["X_7_Y_9"] = "⬛"
+	screen["X_8_Y_9"] = "⬛"
+	screen["X_9_Y_9"] = "⬛"
+	screen["X_10_Y_9"] = "⬛"
+
+	screen["X_0_Y_10"] = "⬛"
+	screen["X_1_Y_10"] = "⬛"
+	screen["X_2_Y_10"] = "⬛"
+	screen["X_3_Y_10"] = "⬛"
+	screen["X_4_Y_10"] = "⬛"
+	screen["X_5_Y_10"] = "⬛"
+	screen["X_6_Y_10"] = "⬛"
+	screen["X_7_Y_10"] = "⬛"
+	screen["X_8_Y_10"] = "⬛"
+	screen["X_9_Y_10"] = "⬛"
+	screen["X_10_Y_10"] = "⬛"
 	
 	Update()
 	
