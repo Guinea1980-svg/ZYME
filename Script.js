@@ -601,6 +601,15 @@ function ChangeDisplayCube() {
 	screen["X_6_Y_1"] = "⬜"
 	screen["X_7_Y_1"] = "⬜"
 
+	screen["X_0_Y_2"] = "⬜"
+	screen["X_1_Y_2"] = "⬜"
+	screen["X_2_Y_2"] = "⬜"
+	screen["X_3_Y_2"] = "⬜"
+	screen["X_4_Y_2"] = "⬜"
+	screen["X_5_Y_2"] = "⬜"
+	screen["X_6_Y_2"] = "⬜"
+	screen["X_7_Y_2"] = "⬜"
+
 	screen["X_0_Y_3"] = "⬜"
 	screen["X_1_Y_3"] = "⬜"
 	screen["X_2_Y_3"] = "⬜"
