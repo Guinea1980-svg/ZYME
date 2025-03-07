@@ -143,6 +143,12 @@ let Speed_X = 1
 let Speed_Y = 4
 let Speed_Char = "🟥"
 
+let Slow_X_Old = 0
+let Slow_Y_Old = 0
+let Slow_X = 8
+let Slow_Y = 6
+let Slow_Char = "🟪"
+
 let screen = { 
  X_0_Y_0: Cube_Char,
  X_0_Y_1: "⬜",
@@ -247,7 +253,7 @@ let screen = {
  X_8_Y_3: "⬜",
  X_8_Y_4: "⬜",
  X_8_Y_5: "⬜",
- X_8_Y_6: "⬜",
+ X_8_Y_6: Slow_Char,
  X_8_Y_7: "⬜",
  X_8_Y_8: "⬜",
  X_8_Y_9: "⬜",
@@ -569,6 +575,41 @@ function RandomizeSpeed() {
 	}	
 	
 };
+function RandomizeSlow() {
+	
+	Slow_X_Old = Slow_X
+	Slow_Y_Old = Slow_Y
+	
+
+
+	let Valid = false
+	
+	while (Valid == false) {
+  		Slow_X = Math.floor((Math.random() * 10));
+		Slow_Y = Math.floor((Math.random() * 10));
+
+		if (screen[`X_${Slow_X}_Y_${Slow_Y}`] != Cube_Body || screen[`X_${Slow_X}_Y_${Slow_Y}`] != Cube_Char  )  {
+			
+			screen[`X_${Slow_X}_Y_${Slow_Y}`] = Slow_Char
+			
+			screen[`X_${Slow_X_Old}_Y_${Slow_Y_Old}`] = Cube_Char
+			
+			document.getElementsByClassName(`X_${Slow_X}_Y_${Slow_Y}`)[0].innerHTML = screen[`X_${Slow_X}_Y_${Slow_Y}`]
+			
+			document.getElementsByClassName(`X_${Slow_X_Old}_Y_${Slow_Y_Old}`)[0].innerHTML = screen[`X_${Slow_X_Old}_Y_${Slow_Y_Old}`]
+
+			Valid = true
+
+			Cube_Slow = 200
+
+			return 0
+			
+			
+		}
+
+	}	
+	
+};
 
 function LogCubeHistory() {
 	
@@ -604,6 +645,11 @@ function CheckForCoin() {
 	if (Speed_X == Cube_X) {
 		if (Speed_Y == Cube_Y) {		
 			RandomizeSpeed()
+		}
+	}
+	if (Slow_X == Cube_X) {
+		if (Slow_Y == Cube_Y) {		
+			RandomizeSlow()
 		}
 	}
 	if (screen[`X_${Cube_X}_Y_${Cube_Y}`] == Cube_Body) {
