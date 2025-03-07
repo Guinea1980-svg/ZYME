@@ -712,6 +712,9 @@ function ChangeDisplayCube() {
 	screen["X_5_Y_0"] = "⬜"
 	screen["X_6_Y_0"] = "⬜"
 	screen["X_7_Y_0"] = "⬜"
+	screen["X_8_Y_0"] = "⬜"
+	screen["X_9_Y_0"] = "⬜"
+	screen["X_10_Y_0"] = "⬜"
 
 	screen["X_0_Y_1"] = "⬜"
 	screen["X_1_Y_1"] = "⬜"
@@ -721,6 +724,9 @@ function ChangeDisplayCube() {
 	screen["X_5_Y_1"] = "⬜"
 	screen["X_6_Y_1"] = "⬜"
 	screen["X_7_Y_1"] = "⬜"
+	screen["X_8_Y_1"] = "⬜"
+	screen["X_9_Y_1"] = "⬜"
+	screen["X_10_Y_1"] = "⬜"
 
 	screen["X_0_Y_2"] = "⬜"
 	screen["X_1_Y_2"] = "⬜"
@@ -730,6 +736,9 @@ function ChangeDisplayCube() {
 	screen["X_5_Y_2"] = "⬜"
 	screen["X_6_Y_2"] = "⬜"
 	screen["X_7_Y_2"] = "⬜"
+	screen["X_8_Y_2"] = "⬜"
+	screen["X_9_Y_2"] = "⬜"
+	screen["X_10_Y_2"] = "⬜"
 
 	screen["X_0_Y_3"] = "⬜"
 	screen["X_1_Y_3"] = "⬜"
@@ -739,6 +748,9 @@ function ChangeDisplayCube() {
 	screen["X_5_Y_3"] = "⬜"
 	screen["X_6_Y_3"] = "⬜"
 	screen["X_7_Y_3"] = "⬜"
+	screen["X_8_Y_3"] = "⬜"
+	screen["X_9_Y_3"] = "⬜"
+	screen["X_10_Y_3"] = "⬜"
 
 	screen["X_0_Y_4"] = "⬜"
 	screen["X_1_Y_4"] = "⬜"
@@ -748,6 +760,9 @@ function ChangeDisplayCube() {
 	screen["X_5_Y_4"] = "⬜"
 	screen["X_6_Y_4"] = "⬜"
 	screen["X_7_Y_4"] = "⬜"
+	screen["X_8_Y_4"] = "⬜"
+	screen["X_9_Y_4"] = "⬜"
+	screen["X_10_Y_4"] = "⬜"
 
 	screen["X_0_Y_5"] = "⬜"
 	screen["X_1_Y_5"] = "⬜"
@@ -757,6 +772,9 @@ function ChangeDisplayCube() {
 	screen["X_5_Y_5"] = "⬜"
 	screen["X_6_Y_5"] = "⬜"
 	screen["X_7_Y_5"] = "⬜"
+	screen["X_8_Y_5"] = "⬜"
+	screen["X_9_Y_5"] = "⬜"
+	screen["X_10_Y_5"] = "⬜"
 
 	screen["X_0_Y_6"] = "⬜"
 	screen["X_1_Y_6"] = "⬜"
@@ -766,6 +784,9 @@ function ChangeDisplayCube() {
 	screen["X_5_Y_6"] = "⬜"
 	screen["X_6_Y_6"] = "⬜"
 	screen["X_7_Y_6"] = "⬜"
+	screen["X_8_Y_6"] = "⬜"
+	screen["X_9_Y_6"] = "⬜"
+	screen["X_10_Y_6"] = "⬜"
 
 	screen["X_0_Y_7"] = "⬜"
 	screen["X_1_Y_7"] = "⬜"
@@ -775,10 +796,55 @@ function ChangeDisplayCube() {
 	screen["X_5_Y_7"] = "⬜"
 	screen["X_6_Y_7"] = "⬜"
 	screen["X_7_Y_7"] = "⬜"
-	screen[`X_${Coin_X}_Y_${Coin_Y}`] = Coin_Char
+	screen["X_8_Y_7"] = "⬜"
+	screen["X_9_Y_7"] = "⬜"
+	screen["X_10_Y_7"] = "⬜"
+
+	screen["X_0_Y_8"] = "⬜"
+	screen["X_1_Y_8"] = "⬜"
+	screen["X_2_Y_8"] = "⬜"
+	screen["X_3_Y_8"] = "⬜"
+	screen["X_4_Y_8"] = "⬜"
+	screen["X_5_Y_8"] = "⬜"
+	screen["X_6_Y_8"] = "⬜"
+	screen["X_7_Y_8"] = "⬜"
+	screen["X_8_Y_8"] = "⬜"
+	screen["X_9_Y_8"] = "⬜"
+	screen["X_10_Y_8"] = "⬜"
+
+	screen["X_0_Y_9"] = "⬜"
+	screen["X_1_Y_9"] = "⬜"
+	screen["X_2_Y_9"] = "⬜"
+	screen["X_3_Y_9"] = "⬜"
+	screen["X_4_Y_9"] = "⬜"
+	screen["X_5_Y_9"] = "⬜"
+	screen["X_6_Y_9"] = "⬜"
+	screen["X_7_Y_9"] = "⬜"
+	screen["X_8_Y_9"] = "⬜"
+	screen["X_9_Y_9"] = "⬜"
+	screen["X_10_Y_9"] = "⬜"
+
+	screen["X_0_Y_10"] = "⬜"
+	screen["X_1_Y_10"] = "⬜"
+	screen["X_2_Y_10"] = "⬜"
+	screen["X_3_Y_10"] = "⬜"
+	screen["X_4_Y_10"] = "⬜"
+	screen["X_5_Y_10"] = "⬜"
+	screen["X_6_Y_10"] = "⬜"
+	screen["X_7_Y_10"] = "⬜"
+	screen["X_8_Y_10"] = "⬜"
+	screen["X_9_Y_10"] = "⬜"
+	screen["X_10_Y_10"] = "⬜"
+	
 	document.getElementsByClassName(`X_${Cube_X}_Y_${Cube_Y}`)[0].innerHTML = Cube_Char
 	document.getElementsByClassName(`X_${Coin_X}_Y_${Coin_Y}`)[0].innerHTML = Coin_Char
+	document.getElementsByClassName(`X_${Speed_X}_Y_${Speed_Y}`)[0].innerHTML = Speed_Char
+	document.getElementsByClassName(`X_${Slow_X}_Y_${Slow_Y}`)[0].innerHTML = Slow_Char
+	
+	screen[`X_${Speed_X}_Y_${Speed_Y}`] = Speed_Char
+	screen[`X_${Slow_X}_Y_${Slow_Y}`] = Slow_Char
 	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
+	screen[`X_${Coin_X}_Y_${Coin_Y}`] = Coin_Char
 	if (Cube_Length == 1) {
 		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "⬜"
 	}
