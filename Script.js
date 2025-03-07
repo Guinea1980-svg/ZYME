@@ -129,6 +129,9 @@ let Cube_Length = 1
 let Cube_Char = "🟦"
 let Cube_Body = "🟩"
 
+let Score = 0
+let High_Score = 0
+
 let Empty = "⬜"
 
 let Coin_X_Old = 0
