@@ -773,80 +773,20 @@ function ChangeDisplayCube() {
 	screen[`X_${Slow_X}_Y_${Slow_Y}`] = Slow_Char
 	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
 	screen[`X_${Coin_X}_Y_${Coin_Y}`] = Coin_Char
-	if (Cube_Length == 1) {
-		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "⬜"
-	}
-	if (Cube_Length == 2) {
-		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
-		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "⬜"
-	}
-	if (Cube_Length == 3) {
-		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
-		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
-		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "⬜"
-	}
-	if (Cube_Length == 4) {
-		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
-		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
-		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
-		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "⬜"
-	}
-	if (Cube_Length == 5) {
-		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
-		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
-		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
-		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
-		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "⬜"
-	}
-	if (Cube_Length == 6) {
-		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
-		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
-		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
-		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
-		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
-		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "⬜"
-	}
-	if (Cube_Length == 7) {
-		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
-		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
-		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
-		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
-		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
-		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
-		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "⬜"
-	}
-	if (Cube_Length == 8) {
-		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
-		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
-		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
-		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
-		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
-		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
-		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "🟩"
-		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "⬜"
-	}
-	if (Cube_Length == 9) {
-		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
-		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
-		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
-		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
-		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
-		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
-		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "🟩"
-		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "🟩"
-		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "⬜"
-	}
-	if (Cube_Length >= 10) {
-		screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = "🟩"
-		screen[`X_${Cube_X_Old_2}_Y_${Cube_Y_Old_2}`] = "🟩"
-		screen[`X_${Cube_X_Old_3}_Y_${Cube_Y_Old_3}`] = "🟩"
-		screen[`X_${Cube_X_Old_4}_Y_${Cube_Y_Old_4}`] = "🟩"
-		screen[`X_${Cube_X_Old_5}_Y_${Cube_Y_Old_5}`] = "🟩"
-		screen[`X_${Cube_X_Old_6}_Y_${Cube_Y_Old_6}`] = "🟩"
-		screen[`X_${Cube_X_Old_7}_Y_${Cube_Y_Old_7}`] = "🟩"
-		screen[`X_${Cube_X_Old_8}_Y_${Cube_Y_Old_8}`] = "🟩"
-		screen[`X_${Cube_X_Old_9}_Y_${Cube_Y_Old_9}`] = "🟩"
-		screen[`X_${Cube_X_Old_10}_Y_${Cube_Y_Old_10}`] = "⬜"
+	if (Cube_Length < Object.keys(Cube_Old_Pos_Data).length) {
+		for (let X = 0; X < Cube_Length + 2; X++) {
+			if (X == Cube_Length) {
+				screen[Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]] = Empty
+			}
+			if (X != Cube_Length)
+				delete Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]
+			}
+			if (X != Cube_Length)
+				screen[Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]] = Cube_Body
+			}
+			
+		}
+};
 	}
 	Update()
 	setTimeout(function(){MoveCube(Direction)}, Cube_Speed);
