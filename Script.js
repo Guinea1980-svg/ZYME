@@ -362,7 +362,6 @@ function Update() {
 	for (let X = 0; X < 10; X++) {
  		 for (let Y = 0; Y < 10; Y++) {
   			document.getElementsByClassName(`X_${X}_Y_${Y}`)[0].innerHTML = screen[`X_${X}_Y_${Y}`]
-			 console.log(screen[`X_${X}_Y_${Y}`])
 		}
 	}
 };
