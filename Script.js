@@ -1,5 +1,6 @@
 let Version = "1.21"
 
+
 console.log("Version: " + Version)
 
 
@@ -74,9 +75,9 @@ let Direction = "Left"
 document.onkeypress = function (e) {
 	e = e || window.event;
 	console.log(e)
-	let prevkey
-	if (prevkey == 112) {
-		if (e.keyCode == 100) {
+	prevkey = e.key
+	if (prevkey == "p") {
+		if (e.key == "d" ) {
 			window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/guyinsuite.webp"
 		
 		}
@@ -99,26 +100,15 @@ document.onkeypress = function (e) {
 	}
 	prevkey = e.keyCode
 };
-let Cube_X_Old_11 = 0
-let Cube_Y_Old_11 = 0
-let Cube_X_Old_10 = 0
-let Cube_Y_Old_10 = 0
-let Cube_X_Old_9 = 0
-let Cube_Y_Old_9 = 0
-let Cube_X_Old_8 = 0
-let Cube_Y_Old_8 = 0
-let Cube_X_Old_7 = 0
-let Cube_Y_Old_7 = 0
-let Cube_X_Old_6 = 0
-let Cube_Y_Old_6 = 0
-let Cube_X_Old_5 = 0
-let Cube_Y_Old_5 = 0
-let Cube_X_Old_4 = 0
-let Cube_Y_Old_4 = 0
-let Cube_X_Old_3 = 0
-let Cube_Y_Old_3 = 0
-let Cube_X_Old_2 = 0
-let Cube_Y_Old_2 = 0
+let ValCount = 1
+
+let Cube_Old_Pos_Data = {
+	Cube_Old_0: `X_0_Y_0`
+}
+
+
+
+
 let Cube_X_Old = 0
 let Cube_Y_Old = 0
 let Cube_X = 0
@@ -369,141 +359,12 @@ function MoveCube(Dir) {
 };
 
 function Update() {
-	
-	document.getElementsByClassName("X_0_Y_0")[0].innerHTML = screen["X_0_Y_0"]
-	document.getElementsByClassName("X_1_Y_0")[0].innerHTML = screen["X_1_Y_0"]
-	document.getElementsByClassName("X_2_Y_0")[0].innerHTML = screen["X_2_Y_0"]
-	document.getElementsByClassName("X_3_Y_0")[0].innerHTML = screen["X_3_Y_0"]
-	document.getElementsByClassName("X_4_Y_0")[0].innerHTML = screen["X_4_Y_0"]
-	document.getElementsByClassName("X_5_Y_0")[0].innerHTML = screen["X_5_Y_0"]
-	document.getElementsByClassName("X_6_Y_0")[0].innerHTML = screen["X_6_Y_0"]
-	document.getElementsByClassName("X_7_Y_0")[0].innerHTML = screen["X_7_Y_0"]
-	document.getElementsByClassName("X_8_Y_0")[0].innerHTML = screen["X_8_Y_0"]
-	document.getElementsByClassName("X_9_Y_0")[0].innerHTML = screen["X_9_Y_0"]
-	document.getElementsByClassName("X_10_Y_0")[0].innerHTML = screen["X_10_Y_0"]
-
-	document.getElementsByClassName("X_0_Y_1")[0].innerHTML = screen["X_0_Y_1"]
-	document.getElementsByClassName("X_1_Y_1")[0].innerHTML = screen["X_1_Y_1"]
-	document.getElementsByClassName("X_2_Y_1")[0].innerHTML = screen["X_2_Y_1"]
-	document.getElementsByClassName("X_3_Y_1")[0].innerHTML = screen["X_3_Y_1"]
-	document.getElementsByClassName("X_4_Y_1")[0].innerHTML = screen["X_4_Y_1"]
-	document.getElementsByClassName("X_5_Y_1")[0].innerHTML = screen["X_5_Y_1"]
-	document.getElementsByClassName("X_6_Y_1")[0].innerHTML = screen["X_6_Y_1"]
-	document.getElementsByClassName("X_7_Y_1")[0].innerHTML = screen["X_7_Y_1"]
-	document.getElementsByClassName("X_8_Y_1")[0].innerHTML = screen["X_8_Y_1"]
-	document.getElementsByClassName("X_9_Y_1")[0].innerHTML = screen["X_9_Y_1"]
-	document.getElementsByClassName("X_10_Y_1")[0].innerHTML = screen["X_10_Y_1"]
-
-	document.getElementsByClassName("X_0_Y_2")[0].innerHTML = screen["X_0_Y_2"]
-	document.getElementsByClassName("X_1_Y_2")[0].innerHTML = screen["X_1_Y_2"]
-	document.getElementsByClassName("X_2_Y_2")[0].innerHTML = screen["X_2_Y_2"]
-	document.getElementsByClassName("X_3_Y_2")[0].innerHTML = screen["X_3_Y_2"]
-	document.getElementsByClassName("X_4_Y_2")[0].innerHTML = screen["X_4_Y_2"]
-	document.getElementsByClassName("X_5_Y_2")[0].innerHTML = screen["X_5_Y_2"]
-	document.getElementsByClassName("X_6_Y_2")[0].innerHTML = screen["X_6_Y_2"]
-	document.getElementsByClassName("X_7_Y_2")[0].innerHTML = screen["X_7_Y_2"]
-	document.getElementsByClassName("X_8_Y_2")[0].innerHTML = screen["X_8_Y_2"]
-	document.getElementsByClassName("X_9_Y_2")[0].innerHTML = screen["X_9_Y_2"]
-	document.getElementsByClassName("X_10_Y_2")[0].innerHTML = screen["X_10_Y_2"]
-
-	document.getElementsByClassName("X_0_Y_3")[0].innerHTML = screen["X_0_Y_3"]
-	document.getElementsByClassName("X_1_Y_3")[0].innerHTML = screen["X_1_Y_3"]
-	document.getElementsByClassName("X_2_Y_3")[0].innerHTML = screen["X_2_Y_3"]
-	document.getElementsByClassName("X_3_Y_3")[0].innerHTML = screen["X_3_Y_3"]
-	document.getElementsByClassName("X_4_Y_3")[0].innerHTML = screen["X_4_Y_3"]
-	document.getElementsByClassName("X_5_Y_3")[0].innerHTML = screen["X_5_Y_3"]
-	document.getElementsByClassName("X_6_Y_3")[0].innerHTML = screen["X_6_Y_3"]
-	document.getElementsByClassName("X_7_Y_3")[0].innerHTML = screen["X_7_Y_3"]
-	document.getElementsByClassName("X_8_Y_3")[0].innerHTML = screen["X_8_Y_3"]
-	document.getElementsByClassName("X_9_Y_3")[0].innerHTML = screen["X_9_Y_3"]
-	document.getElementsByClassName("X_10_Y_3")[0].innerHTML = screen["X_10_Y_3"]
-
-	document.getElementsByClassName("X_0_Y_4")[0].innerHTML = screen["X_0_Y_4"]
-	document.getElementsByClassName("X_1_Y_4")[0].innerHTML = screen["X_1_Y_4"]
-	document.getElementsByClassName("X_2_Y_4")[0].innerHTML = screen["X_2_Y_4"]
-	document.getElementsByClassName("X_3_Y_4")[0].innerHTML = screen["X_3_Y_4"]
-	document.getElementsByClassName("X_4_Y_4")[0].innerHTML = screen["X_4_Y_4"]
-	document.getElementsByClassName("X_5_Y_4")[0].innerHTML = screen["X_5_Y_4"]
-	document.getElementsByClassName("X_6_Y_4")[0].innerHTML = screen["X_6_Y_4"]
-	document.getElementsByClassName("X_7_Y_4")[0].innerHTML = screen["X_7_Y_4"]
-	document.getElementsByClassName("X_8_Y_4")[0].innerHTML = screen["X_8_Y_4"]
-	document.getElementsByClassName("X_9_Y_4")[0].innerHTML = screen["X_9_Y_4"]
-	document.getElementsByClassName("X_10_Y_4")[0].innerHTML = screen["X_10_Y_4"]
-
-	document.getElementsByClassName("X_0_Y_5")[0].innerHTML = screen["X_0_Y_5"]
-	document.getElementsByClassName("X_1_Y_5")[0].innerHTML = screen["X_1_Y_5"]
-	document.getElementsByClassName("X_2_Y_5")[0].innerHTML = screen["X_2_Y_5"]
-	document.getElementsByClassName("X_3_Y_5")[0].innerHTML = screen["X_3_Y_5"]
-	document.getElementsByClassName("X_4_Y_5")[0].innerHTML = screen["X_4_Y_5"]
-	document.getElementsByClassName("X_5_Y_5")[0].innerHTML = screen["X_5_Y_5"]
-	document.getElementsByClassName("X_6_Y_5")[0].innerHTML = screen["X_6_Y_5"]
-	document.getElementsByClassName("X_7_Y_5")[0].innerHTML = screen["X_7_Y_5"]
-	document.getElementsByClassName("X_8_Y_5")[0].innerHTML = screen["X_8_Y_5"]
-	document.getElementsByClassName("X_9_Y_5")[0].innerHTML = screen["X_9_Y_5"]
-	document.getElementsByClassName("X_10_Y_5")[0].innerHTML = screen["X_10_Y_5"]
-
-	document.getElementsByClassName("X_0_Y_6")[0].innerHTML = screen["X_0_Y_6"]
-	document.getElementsByClassName("X_1_Y_6")[0].innerHTML = screen["X_1_Y_6"]
-	document.getElementsByClassName("X_2_Y_6")[0].innerHTML = screen["X_2_Y_6"]
-	document.getElementsByClassName("X_3_Y_6")[0].innerHTML = screen["X_3_Y_6"]
-	document.getElementsByClassName("X_4_Y_6")[0].innerHTML = screen["X_4_Y_6"]
-	document.getElementsByClassName("X_5_Y_6")[0].innerHTML = screen["X_5_Y_6"]
-	document.getElementsByClassName("X_6_Y_6")[0].innerHTML = screen["X_6_Y_6"]
-	document.getElementsByClassName("X_7_Y_6")[0].innerHTML = screen["X_7_Y_6"]
-	document.getElementsByClassName("X_8_Y_6")[0].innerHTML = screen["X_8_Y_6"]
-	document.getElementsByClassName("X_9_Y_6")[0].innerHTML = screen["X_9_Y_6"]
-	document.getElementsByClassName("X_10_Y_6")[0].innerHTML = screen["X_10_Y_6"]
-
-	document.getElementsByClassName("X_0_Y_7")[0].innerHTML = screen["X_0_Y_7"]
-	document.getElementsByClassName("X_1_Y_7")[0].innerHTML = screen["X_1_Y_7"]
-	document.getElementsByClassName("X_2_Y_7")[0].innerHTML = screen["X_2_Y_7"]
-	document.getElementsByClassName("X_3_Y_7")[0].innerHTML = screen["X_3_Y_7"]
-	document.getElementsByClassName("X_4_Y_7")[0].innerHTML = screen["X_4_Y_7"]
-	document.getElementsByClassName("X_5_Y_7")[0].innerHTML = screen["X_5_Y_7"]
-	document.getElementsByClassName("X_6_Y_7")[0].innerHTML = screen["X_6_Y_7"]
-	document.getElementsByClassName("X_7_Y_7")[0].innerHTML = screen["X_7_Y_7"]
-	document.getElementsByClassName("X_8_Y_7")[0].innerHTML = screen["X_8_Y_7"]
-	document.getElementsByClassName("X_9_Y_7")[0].innerHTML = screen["X_9_Y_7"]
-	document.getElementsByClassName("X_10_Y_7")[0].innerHTML = screen["X_10_Y_7"]
-
-	document.getElementsByClassName("X_0_Y_8")[0].innerHTML = screen["X_0_Y_8"]
-	document.getElementsByClassName("X_1_Y_8")[0].innerHTML = screen["X_1_Y_8"]
-	document.getElementsByClassName("X_2_Y_8")[0].innerHTML = screen["X_2_Y_8"]
-	document.getElementsByClassName("X_3_Y_8")[0].innerHTML = screen["X_3_Y_8"]
-	document.getElementsByClassName("X_4_Y_8")[0].innerHTML = screen["X_4_Y_8"]
-	document.getElementsByClassName("X_5_Y_8")[0].innerHTML = screen["X_5_Y_8"]
-	document.getElementsByClassName("X_6_Y_8")[0].innerHTML = screen["X_6_Y_8"]
-	document.getElementsByClassName("X_7_Y_8")[0].innerHTML = screen["X_7_Y_8"]
-	document.getElementsByClassName("X_8_Y_8")[0].innerHTML = screen["X_8_Y_8"]
-	document.getElementsByClassName("X_9_Y_8")[0].innerHTML = screen["X_9_Y_8"]
-	document.getElementsByClassName("X_10_Y_8")[0].innerHTML = screen["X_10_Y_8"]
-
-	document.getElementsByClassName("X_0_Y_9")[0].innerHTML = screen["X_0_Y_9"]
-	document.getElementsByClassName("X_1_Y_9")[0].innerHTML = screen["X_1_Y_9"]
-	document.getElementsByClassName("X_2_Y_9")[0].innerHTML = screen["X_2_Y_9"]
-	document.getElementsByClassName("X_3_Y_9")[0].innerHTML = screen["X_3_Y_9"]
-	document.getElementsByClassName("X_4_Y_9")[0].innerHTML = screen["X_4_Y_9"]
-	document.getElementsByClassName("X_5_Y_9")[0].innerHTML = screen["X_5_Y_9"]
-	document.getElementsByClassName("X_6_Y_9")[0].innerHTML = screen["X_6_Y_9"]
-	document.getElementsByClassName("X_7_Y_9")[0].innerHTML = screen["X_7_Y_9"]
-	document.getElementsByClassName("X_8_Y_9")[0].innerHTML = screen["X_8_Y_9"]
-	document.getElementsByClassName("X_9_Y_9")[0].innerHTML = screen["X_9_Y_9"]
-	document.getElementsByClassName("X_10_Y_9")[0].innerHTML = screen["X_10_Y_9"]
-
-	document.getElementsByClassName("X_0_Y_10")[0].innerHTML = screen["X_0_Y_10"]
-	document.getElementsByClassName("X_1_Y_10")[0].innerHTML = screen["X_1_Y_10"]
-	document.getElementsByClassName("X_2_Y_10")[0].innerHTML = screen["X_2_Y_10"]
-	document.getElementsByClassName("X_3_Y_10")[0].innerHTML = screen["X_3_Y_10"]
-	document.getElementsByClassName("X_4_Y_10")[0].innerHTML = screen["X_4_Y_10"]
-	document.getElementsByClassName("X_5_Y_10")[0].innerHTML = screen["X_5_Y_10"]
-	document.getElementsByClassName("X_6_Y_10")[0].innerHTML = screen["X_6_Y_10"]
-	document.getElementsByClassName("X_7_Y_10")[0].innerHTML = screen["X_7_Y_10"]
-	document.getElementsByClassName("X_8_Y_10")[0].innerHTML = screen["X_8_Y_10"]
-	document.getElementsByClassName("X_9_Y_10")[0].innerHTML = screen["X_9_Y_10"]
-	document.getElementsByClassName("X_10_Y_10")[0].innerHTML = screen["X_10_Y_10"]
-	
-	
-	
+	for (let X = 0; X < 10; X++) {
+ 		 for (let Y = 0; Y < 10; Y++) {
+  			document.getElementsByClassName(`X_${X}_Y_${Y}`)[0].innerHTML = screen[`X_${X}_Y_${Y}`]
+			 console.log(screen[`X_${X}_Y_${Y}`])
+		}
+	}
 };
 
 
@@ -616,26 +477,7 @@ function RandomizeSlow() {
 
 function LogCubeHistory() {
 	
-	Cube_X_Old_11 = Cube_X_Old_10
-	Cube_Y_Old_10 = Cube_Y_Old_9
-	Cube_X_Old_9 = Cube_X_Old_8
-	Cube_Y_Old_9 = Cube_Y_Old_8
-	Cube_X_Old_8 = Cube_X_Old_7
-	Cube_Y_Old_8 = Cube_Y_Old_7
-	Cube_X_Old_7 = Cube_X_Old_6
-	Cube_Y_Old_7 = Cube_Y_Old_6
-	Cube_X_Old_6 = Cube_X_Old_5
-	Cube_Y_Old_6 = Cube_Y_Old_5
-	Cube_X_Old_5 = Cube_X_Old_4
-	Cube_Y_Old_5 = Cube_Y_Old_4
-	Cube_X_Old_4 = Cube_X_Old_3
-	Cube_Y_Old_4 = Cube_Y_Old_3
-	Cube_X_Old_3 = Cube_X_Old_2
-	Cube_Y_Old_3 = Cube_Y_Old_2
-	Cube_X_Old_2 = Cube_X_Old
-	Cube_Y_Old_2 = Cube_Y_Old
-	Cube_X_Old = Cube_X
-	Cube_Y_Old = Cube_Y
+	Cube_Old_Pos_Data[`Cube_Old_${ValCount}`] = `X_${Cube_X}_Y_${Cube_Y}`
 	
 };
 
