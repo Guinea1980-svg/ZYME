@@ -478,6 +478,8 @@ function RandomizeSlow() {
 function LogCubeHistory() {
 	
 	Cube_Old_Pos_Data[`Cube_Old_${ValCount}`] = `X_${Cube_X}_Y_${Cube_Y}`
+
+	ValCount += 1
 	
 };
 
