@@ -773,6 +773,7 @@ function ChangeDisplayCube() {
 	screen[`X_${Slow_X}_Y_${Slow_Y}`] = Slow_Char
 	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
 	screen[`X_${Coin_X}_Y_${Coin_Y}`] = Coin_Char
+	
 	if (Cube_Length < Object.keys(Cube_Old_Pos_Data).length) {
 		for (let X = 0; X < Cube_Length + 2; X++) {
 			if (X == Cube_Length) {
