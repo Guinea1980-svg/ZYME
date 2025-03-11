@@ -777,12 +777,11 @@ function ChangeDisplayCube() {
 	screen[`X_${Coin_X}_Y_${Coin_Y}`] = Coin_Char
 	
 	if (Cube_Length < Object.keys(Cube_Old_Pos_Data).length) {
-		for (let X = 0; X < Cube_Length + 2; X++) {
-			if (X == Cube_Length + 1) {
+		for (let X = 0; X < Cube_Length; X++) {
+			if (X == Cube_Length) {
 				screen[Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]] = Empty
-			}
-			if (X == Cube_Length + 2) {
 				delete Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]
+				
 			}
 			if (X != Cube_Length) {
 				screen[Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]] = Cube_Body
