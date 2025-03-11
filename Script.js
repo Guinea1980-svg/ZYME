@@ -787,7 +787,6 @@ function ChangeDisplayCube() {
 			}
 			
 		}
-};
 	}
 	Update()
 	setTimeout(function(){MoveCube(Direction)}, Cube_Speed);
