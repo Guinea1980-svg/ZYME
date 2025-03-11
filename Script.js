@@ -623,6 +623,8 @@ function Reset() {
 	screen["X_10_Y_10"] = "⬛"
 
 	Cube_Old_Pos_Data = {}
+
+	ValCount = 0
 	
 	Update()
 	
@@ -779,12 +781,12 @@ function ChangeDisplayCube() {
 	if (Cube_Length < Object.keys(Cube_Old_Pos_Data).length) {
 		for (let X = 0; X < Cube_Length; X++) {
 			if (X == Cube_Length) {
-				screen[Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]] = Empty
+				screen[`${Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]}`] = Empty
 				delete Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]
 				
 			}
 			if (X != Cube_Length) {
-				screen[Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]] = Cube_Body
+				screen[`${Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]}`] = Cube_Body
 			}
 			
 		}
