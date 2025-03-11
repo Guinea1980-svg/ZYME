@@ -621,6 +621,8 @@ function Reset() {
 	screen["X_8_Y_10"] = "⬛"
 	screen["X_9_Y_10"] = "⬛"
 	screen["X_10_Y_10"] = "⬛"
+
+	Cube_Old_Pos_Data = {}
 	
 	Update()
 	
