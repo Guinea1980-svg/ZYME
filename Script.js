@@ -781,8 +781,8 @@ function ChangeDisplayCube() {
 	if (Cube_Length < Object.keys(Cube_Old_Pos_Data).length) {
 		for (let X = 0; X < Cube_Length; X++) {
 			if (X == Cube_Length) {
-				screen[`${Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]}`] = Empty
-				delete Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]
+				screen[`${Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[0]]}`] = Empty
+				delete Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[0]]
 				
 			}
 			if (X != Cube_Length) {
