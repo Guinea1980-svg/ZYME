@@ -783,7 +783,7 @@ function ChangeDisplayCube() {
 			screen[`${Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]}`] = Empty
 			
 		}
-		if (X < Cube_Length) {
+		else {
 			screen[`${Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]}`] = Cube_Body
 		}
 		delete Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]
