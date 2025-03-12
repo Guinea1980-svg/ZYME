@@ -625,7 +625,7 @@ function Reset() {
 	Cube_Old_Pos_Data = {}
 
 	ValCount = 0
-	
+	wwwwwwwssdsaa
 	Update()
 	
 	setTimeout(function(){RandomizeCoin()}, 5000);
@@ -786,7 +786,7 @@ function ChangeDisplayCube() {
 		if (X < Cube_Length) {
 			screen[`${Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]}`] = Cube_Body
 		}
-		delete Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[0]]
+		delete Cube_Old_Pos_Data[Object.keys(Cube_Old_Pos_Data)[X]]
 			
 	}
 	Update()
