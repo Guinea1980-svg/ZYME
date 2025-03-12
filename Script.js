@@ -625,7 +625,6 @@ function Reset() {
 	Cube_Old_Pos_Data = {}
 
 	ValCount = 0
-	wwwwwwwssdsaa
 	Update()
 	
 	setTimeout(function(){RandomizeCoin()}, 5000);
