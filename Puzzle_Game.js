@@ -255,8 +255,8 @@ function MoveCube(Dir) {
 };
 
 function Update() {
-	for (let X = 0; X < 10; X++) {
- 		 for (let Y = 0; Y < 10; Y++) {
+	for (let X = 0; X < 11; X++) {
+ 		 for (let Y = 0; Y < 11; Y++) {
   			document.getElementsByClassName(`X_${X}_Y_${Y}`)[0].innerHTML = screen[`X_${X}_Y_${Y}`]
 		}
 	}
@@ -289,8 +289,8 @@ function ChangeDisplayCube() {
 
 	
 	
-	for (let X = 0; X < 10; X++) {
- 		 for (let Y = 0; Y < 10; Y++) {
+	for (let X = 0; X < 11; X++) {
+ 		 for (let Y = 0; Y < 11; Y++) {
   			screen[`X_${X}_Y_${Y}`] = Empty
 		}
 	}
