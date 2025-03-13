@@ -1,17 +1,15 @@
 let prevkey 
 let Direction = "Left"
 
+let SnakeGameVer = "1.1"
+
+console.log(`Game Version: ${SnakeGameVer}`)
+
 document.onkeypress = function (e) {
 	e = e || window.event;
 	console.log(e)
-	prevkey = e.key
-	if (prevkey == "p") {
-		if (e.key == "d" ) {
-			window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/guyinsuite.webp"
-		
-		}
-	}
-    if (e.key == "w") {
+	prevkey = e.key}
+    	if (e.key == "w") {
 		Direction = "Down"
 		
 	}
