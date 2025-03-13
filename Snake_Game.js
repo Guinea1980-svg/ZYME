@@ -8,8 +8,8 @@ console.log(`Game Version: ${SnakeGameVer}`)
 document.onkeypress = function (e) {
 	e = e || window.event;
 	console.log(e)
-	prevkey = e.key}
-    	if (e.key == "w") {
+	prevkey = e.key
+	if (e.key == "w") {
 		Direction = "Down"
 		
 	}
@@ -19,16 +19,15 @@ document.onkeypress = function (e) {
 	}
 	if (e.key == "s") {
 		Direction = "Up"
-		
+	
 	}
 	if (e.key == "d") {
 		Direction = "Left"
 		
 	}
 	prevkey = e.keyCode
-};
+}
 let ValCount = 1
-
 let Cube_Old_Pos_Data = {
 	Cube_Old_0: `X_0_Y_0`
 }
