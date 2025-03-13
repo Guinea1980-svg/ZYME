@@ -10,19 +10,19 @@ document.onkeypress = function (e) {
 	console.log(e)
 	prevkey = e.key
 	if (e.key == "w") {
-		Direction = "Down"
+		MoveCube("Up")
 		
 	}
 	if (e.key == "a") {
-		Direction = "Right"
+		MoveCube("Left")
 		
 	}
 	if (e.key == "s") {
-		Direction = "Up"
+		MoveCube("Down")
 	
 	}
 	if (e.key == "d") {
-		Direction = "Left"
+		MoveCube("Right")
 		
 	}
 	prevkey = e.keyCode
@@ -284,14 +284,10 @@ function Reset() {
 function ChangeDisplayCube() {
 
 	
+	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
 	
 	
 	
-	for (let X = 0; X < Cube_Length; X++) {
-		if (X >= Cube_Length) {
-
-			
-	}
 
 	Update()
 	
