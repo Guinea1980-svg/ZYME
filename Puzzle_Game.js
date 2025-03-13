@@ -32,7 +32,7 @@ let Cube_Old_Pos_Data = {
   
 }
 
-
+let prevMoveDir = ""
 
 let Cube_X_Old = 0
 let Cube_Y_Old = 0
@@ -40,6 +40,13 @@ let Cube_X = 0
 let Cube_Y = 0
 
 let Cube_Char = "🟦"
+
+let Box_X_Old = 0
+let Box_Y_Old = 0
+let Box_X = 3
+let Box_Y = 3
+
+let Box_Char = "🟫"
 
 let Score = 0
 let High_Score = 0
@@ -182,7 +189,88 @@ let screen = {
 
 }
 
+function MoveBox(Dir) {
+	if (Dir == "Up") {
+
+		if (Cube_Y != 10) {
+			LogCubeHistory()
+			
+			Cube_Y += 1
+			
+			ChangeDisplayCube()
+			return Cube_Y
+		}
+		if (Cube_Y == 10) {
+			
+			LogCubeHistory()
+			
+			Cube_Y = 0
+			
+			ChangeDisplayCube()
+			
+			return Cube_Y
+		}
+	}
+	if (Dir == "Down") {
+		
+		if (Cube_Y != 0) {
+			LogCubeHistory()
+			Cube_Y -= 1
+			ChangeDisplayCube()
+			return Cube_Y
+		}
+		if (Cube_Y <= 0) {
+			LogCubeHistory()
+			Cube_Y = 10
+			ChangeDisplayCube()
+			return Cube_Y
+		}
+		
+	}
+	if (Dir == "Left") {
+
+		if (Cube_X != 10) {
+			LogCubeHistory()
+			Cube_X += 1
+			ChangeDisplayCube()
+			return 0
+		}
+		if (Cube_X >= 10) {
+			LogCubeHistory()
+			Cube_X = 0
+			ChangeDisplayCube()
+			return 0
+		}
+		
+	}
+	if (Dir == "Right") {
+		if (Cube_X != 0) {
+			LogCubeHistory()
+			Cube_X -= 1
+			ChangeDisplayCube()
+			return Cube_X
+		}
+		if (Cube_X <= 0) {
+			LogCubeHistory()
+			Cube_X = 10
+			ChangeDisplayCube()
+			return Cube_X
+		}
+		
+	}
+}
+
+function CheckForBox() {
+
+	if (`X_${Box_X}_Y_${Box_Y}` == `X_${Cube_X}_Y_${Cube_Y}`) {
+		MoveBox(prevMoveDir)
+	}
+	
+}
+
 function MoveCube(Dir) {
+
+	prevMoveDir = Dir
 	
 	if (Dir == "Up") {
 
