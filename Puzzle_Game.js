@@ -34,6 +34,8 @@ let Cube_Old_Pos_Data = {
 
 let prevMoveDir = ""
 
+let Cube_X_Old_1 = 0
+let Cube_Y_Old_1 = 0
 let Cube_X_Old = 0
 let Cube_Y_Old = 0
 let Cube_X = 0
@@ -47,6 +49,8 @@ let Box_X = 3
 let Box_Y = 3
 
 let Box_Char = "🟫"
+let Wall_Positions = [`X_4_Y_0`,`X_4_Y_1`,`X_4_Y_2`,`X_0_Y_3`,`X_1_Y_3`,`X_2_Y_3`,]
+let Wall_Char = "⬛"
 
 let Score = 0
 let High_Score = 0
@@ -272,21 +276,21 @@ function MoveCube(Dir) {
 
 		if (Cube_Y != 10) {
 			LogCubeHistory()
+			CheckForBox()
 			
 			Cube_Y += 1
 			
 			ChangeDisplayCube()
-			CheckForBox()
 			return Cube_Y
 		}
 		if (Cube_Y == 10) {
 			
 			LogCubeHistory()
+			CheckForBox()
 			
 			Cube_Y = 0
 			
 			ChangeDisplayCube()
-			CheckForBox()
 			
 			return Cube_Y
 		}
@@ -295,16 +299,18 @@ function MoveCube(Dir) {
 		
 		if (Cube_Y != 0) {
 			LogCubeHistory()
+			CheckForBox()
 			Cube_Y -= 1
 			ChangeDisplayCube()
-			CheckForBox()
+
 			return Cube_Y
 		}
 		if (Cube_Y <= 0) {
 			LogCubeHistory()
+			CheckForBox()
 			Cube_Y = 10
 			ChangeDisplayCube()
-			CheckForBox()
+			
 			return Cube_Y
 		}
 		
@@ -313,16 +319,18 @@ function MoveCube(Dir) {
 
 		if (Cube_X != 10) {
 			LogCubeHistory()
+			CheckForBox()
 			Cube_X += 1
 			ChangeDisplayCube()
-			CheckForBox()
+			
 			return 0
 		}
 		if (Cube_X >= 10) {
 			LogCubeHistory()
+			CheckForBox()
 			Cube_X = 0
 			ChangeDisplayCube()
-			CheckForBox()
+			
 			return 0
 		}
 		
@@ -330,16 +338,16 @@ function MoveCube(Dir) {
 	if (Dir == "Right") {
 		if (Cube_X != 0) {
 			LogCubeHistory()
+			CheckForBox()	
 			Cube_X -= 1
 			ChangeDisplayCube()
-			CheckForBox()
 			return Cube_X
 		}
 		if (Cube_X <= 0) {
 			LogCubeHistory()
+			CheckForBox()
 			Cube_X = 10
 			ChangeDisplayCube()
-			CheckForBox()
 			return Cube_X
 		}
 		
@@ -356,7 +364,9 @@ function Update() {
 
 
 function LogCubeHistory() {
-
+	
+	Cube_X_Old1 = Cube_X_Old
+	Cube_Y_Old1 = Cube_Y_Old
 	Cube_X_Old = Cube_X
 	Cube_Y_Old = Cube_Y
 	
@@ -392,5 +402,7 @@ function ChangeDisplayCube() {
 	screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = Empty
 
 	Update()
+
+	setTimeout(ChangeDisplayCube,100)
 	
 };
