@@ -286,7 +286,11 @@ function ChangeDisplayCube() {
 	
 	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
 	
-	
+	for (let X = 0; X < 10; X++) {
+ 		 for (let Y = 0; Y < 10; Y++) {
+  			screen[`X_${X}_Y_${Y}`] = "⬜"
+		}
+	}
 	
 
 	Update()
