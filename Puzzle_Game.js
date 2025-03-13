@@ -34,7 +34,8 @@ let Cube_Old_Pos_Data = {
 
 
 
-
+let Cube_X_Old = 0
+let Cube_Y_Old = 0
 let Cube_X = 0
 let Cube_Y = 0
 
@@ -263,6 +264,9 @@ function Update() {
 
 
 function LogCubeHistory() {
+
+	Cube_X_Old = Cube_X
+	Cube_Y_Old = Cube_Y
 	
 	Cube_Old_Pos_Data[`Cube_Old_${ValCount}`] = `X_${Cube_X}_Y_${Cube_Y}`
 
@@ -284,14 +288,14 @@ function Reset() {
 function ChangeDisplayCube() {
 
 	
-	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
 	
 	for (let X = 0; X < 10; X++) {
  		 for (let Y = 0; Y < 10; Y++) {
   			screen[`X_${X}_Y_${Y}`] = "⬜"
 		}
 	}
-	
+
+	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
 
 	Update()
 	
