@@ -388,6 +388,7 @@ function ChangeDisplayCube() {
 	}
 
 	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
+	screen[`X_${Box_X}_Y_${Box_Y}`] = Box_Char
 	screen[`X_${Cube_X_Old}_Y_${Cube_Y_Old}`] = Empty
 
 	Update()
