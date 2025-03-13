@@ -10,19 +10,19 @@ document.onkeypress = function (e) {
 	console.log(e)
 	prevkey = e.key
 	if (e.key == "w") {
-		MoveCube("Up")
+		MoveCube("Down")
 		
 	}
 	if (e.key == "a") {
-		MoveCube("Left")
+		MoveCube("Right")
 		
 	}
 	if (e.key == "s") {
-		MoveCube("Down")
+		MoveCube("Up")
 	
 	}
 	if (e.key == "d") {
-		MoveCube("Right")
+		MoveCube("Left")
 		
 	}
 	prevkey = e.keyCode
