@@ -720,3 +720,6 @@ function ChangeDisplayCube() {
 	setTimeout(function(){MoveCube(Direction)}, Cube_Speed);
 	
 };
+if (window.location.href == "https://guinea1980-svg.github.io/ZYME/Snake.html") {
+	setTimeout(function(){MoveCube(Direction)}, Cube_Speed);
+}
