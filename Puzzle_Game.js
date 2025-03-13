@@ -188,12 +188,12 @@ function MoveCube(Dir) {
 		if (Cube_Y != 10) {
 			LogCubeHistory()
 			
-			Cube_Y -= 1
+			Cube_Y += 1
 			
 			ChangeDisplayCube()
-			return 0
+			return Cube_Y
 		}
-		if (Cube_Y >= 10) {
+		if (Cube_Y == 10) {
 			
 			LogCubeHistory()
 			
@@ -201,22 +201,22 @@ function MoveCube(Dir) {
 			
 			ChangeDisplayCube()
 			
-			return 0
+			return Cube_Y
 		}
 	}
 	if (Dir == "Down") {
 		
 		if (Cube_Y != 0) {
 			LogCubeHistory()
-			Cube_Y += 1
+			Cube_Y -= 1
 			ChangeDisplayCube()
-			return 0
+			return Cube_Y
 		}
 		if (Cube_Y <= 0) {
 			LogCubeHistory()
 			Cube_Y = 10
 			ChangeDisplayCube()
-			return 0
+			return Cube_Y
 		}
 		
 	}
@@ -224,7 +224,7 @@ function MoveCube(Dir) {
 
 		if (Cube_X != 10) {
 			LogCubeHistory()
-			Cube_X -= 1
+			Cube_X += 1
 			ChangeDisplayCube()
 			return 0
 		}
@@ -239,15 +239,15 @@ function MoveCube(Dir) {
 	if (Dir == "Right") {
 		if (Cube_X != 0) {
 			LogCubeHistory()
-			Cube_X += 1
+			Cube_X -= 1
 			ChangeDisplayCube()
-			return 0
+			return Cube_X
 		}
 		if (Cube_X <= 0) {
 			LogCubeHistory()
 			Cube_X = 10
 			ChangeDisplayCube()
-			return 0
+			return Cube_X
 		}
 		
 	}
