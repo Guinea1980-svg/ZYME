@@ -42,18 +42,19 @@ let Cube_X = 0
 let Cube_Y = 0
 
 let Cube_Char = "🟦"
-
+let Box_X_Old_1 = 0
+let Box_Y_Old_1 = 0
 let Box_X_Old = 0
 let Box_Y_Old = 0
 let Box_X = 3
 let Box_Y = 3
 
 let Box_Char = "🟫"
-let Wall_Positions = [`X_4_Y_0`,`X_4_Y_1`,`X_4_Y_2`,`X_0_Y_3`,`X_1_Y_3`,`X_2_Y_3`,]
+let Wall_Positions = [`X_4_Y_0`,`X_4_Y_1`,`X_4_Y_2`,`X_0_Y_3`,`X_1_Y_3`,`X_2_Y_3`,`X_2_Y_9`,`X_2_Y_5`,`X_3_Y_5`,`X_4_Y_5`,`X_5_Y_5`,`X_5_Y_4`,`X_5_Y_3`,`X_2_Y_6`,`X_2_Y_7`,`X_2_Y_8`,`X_10_Y_4`,]
 let Wall_Char = "⬛"
 
 let Score = 0
-let High_Score = 0
+let High_Score = 0aa
 
 let Empty = "⬜"
 
@@ -193,6 +194,14 @@ let screen = {
 
 }
 
+function LogBoxHistory() {
+	Box_X_Old = Box_X
+	Box_Y_Old = Box_Y
+	Box_X_Old_1 = Box_X_Old
+	Box_Y_Old_1 = Box_Y_Old
+	
+}
+
 function MoveBox(Dir) {
 	if (Dir == "Up") {
 
@@ -202,6 +211,25 @@ function MoveBox(Dir) {
 			Box_Y += 1
 			
 			ChangeDisplayCube()
+			for (let Z = 0; Z < Wall_Positions.length + 1; Z++) {
+				console.log(Wall_Positions[Z])
+				if (Wall_Positions[Z] == `X_${Box_X}_Y_${Box_Y}`) {
+					console.log("Detected Wall")
+					Box_X = Box_X_Old
+					Box_Y = Box_Y_Old
+					Box_X_Old = Box_X_Old_1
+					Box_Y_Old = Box_X_Old_1
+					
+					Cube_X = Cube_X_Old
+					Cube_Y = Cube_Y_Old
+					Cube_X_Old = Cube_X_Old_1
+					Cube_Y_Old = Cube_X_Old_1
+					for (let Z = 0; Z < Wall_Positions + 1; X++) {
+						screen[`${Wall_Positions[Z]}`] = Wall_Char
+					}
+				}
+			}
+			LogBoxHistory()
 			return Box_Y
 		}
 		if (Box_Y == 10) {
@@ -210,7 +238,25 @@ function MoveBox(Dir) {
 			
 			Box_Y = 0
 			
-			
+			for (let Z = 0; Z < Wall_Positions.length + 1; Z++) {
+				console.log(Wall_Positions[Z])
+				if (Wall_Positions[Z] == `X_${Box_X}_Y_${Box_Y}`) {
+					console.log("Detected Wall")
+					Box_X = Box_X_Old
+					Box_Y = Box_Y_Old
+					Box_X_Old = Box_X_Old_1
+					Box_Y_Old = Box_X_Old_1
+					
+					Cube_X = Cube_X_Old
+					Cube_Y = Cube_Y_Old
+					Cube_X_Old = Cube_X_Old_1
+					Cube_Y_Old = Cube_X_Old_1
+					for (let Z = 0; Z < Wall_Positions + 1; X++) {
+						screen[`${Wall_Positions[Z]}`] = Wall_Char
+					}
+				}
+			}
+			LogBoxHistory()
 			return Box_Y
 		}
 	}
@@ -218,11 +264,48 @@ function MoveBox(Dir) {
 		
 		if (Box_Y != 0) {
 			Box_Y -= 1
+			for (let Z = 0; Z < Wall_Positions.length + 1; Z++) {
+				console.log(Wall_Positions[Z])
+				if (Wall_Positions[Z] == `X_${Box_X}_Y_${Box_Y}`) {
+					console.log("Detected Wall")
+					Box_X = Box_X_Old
+					Box_Y = Box_Y_Old
+					Box_X_Old = Box_X_Old_1
+					Box_Y_Old = Box_X_Old_1
+					
+					Cube_X = Cube_X_Old
+					Cube_Y = Cube_Y_Old
+					Cube_X_Old = Cube_X_Old_1
+					Cube_Y_Old = Cube_X_Old_1
+					for (let Z = 0; Z < Wall_Positions + 1; X++) {
+						screen[`${Wall_Positions[Z]}`] = Wall_Char
+					}
+				}
+			}
+			LogBoxHistory()
 			return Box_Y
 		}
 		if (Box_Y <= 0) {
 			Box_Y = 10
-	
+			for (let Z = 0; Z < Wall_Positions.length + 1; Z++) {
+				console.log(Wall_Positions[Z])
+				if (Wall_Positions[Z] == `X_${Box_X}_Y_${Box_Y}`) {
+					console.log("Detected Wall")
+					Box_X = Box_X_Old
+					Box_Y = Box_Y_Old
+					Box_X_Old = Box_X_Old_1
+					Box_Y_Old = Box_X_Old_1
+					
+					Cube_X = Cube_X_Old
+					Cube_Y = Cube_Y_Old
+					Cube_X_Old = Cube_X_Old_1
+					Cube_Y_Old = Cube_X_Old_1
+					for (let Z = 0; Z < Wall_Positions + 1; X++) {
+						screen[`${Wall_Positions[Z]}`] = Wall_Char
+					}
+				}
+			}
+			LogBoxHistory()
 			return Box_Y
 		}
 		
@@ -232,13 +315,49 @@ function MoveBox(Dir) {
 		if (Box_X != 10) {
 	
 			Box_X += 1
-			
+			for (let Z = 0; Z < Wall_Positions.length + 1; Z++) {
+				console.log(Wall_Positions[Z])
+				if (Wall_Positions[Z] == `X_${Box_X}_Y_${Box_Y}`) {
+					console.log("Detected Wall")
+					Box_X = Box_X_Old
+					Box_Y = Box_Y_Old
+					Box_X_Old = Box_X_Old_1
+					Box_Y_Old = Box_X_Old_1
+					
+					Cube_X = Cube_X_Old
+					Cube_Y = Cube_Y_Old
+					Cube_X_Old = Cube_X_Old_1
+					Cube_Y_Old = Cube_X_Old_1
+					for (let Z = 0; Z < Wall_Positions + 1; X++) {
+						screen[`${Wall_Positions[Z]}`] = Wall_Char
+					}
+				}
+			}
+			LogBoxHistory()
 			return 0
 		}
 		if (Box_X >= 10) {
 		
 			Box_X = 0
-			
+			for (let Z = 0; Z < Wall_Positions.length + 1; Z++) {
+				console.log(Wall_Positions[Z])
+				if (Wall_Positions[Z] == `X_${Box_X}_Y_${Box_Y}`) {
+					console.log("Detected Wall")
+					Box_X = Box_X_Old
+					Box_Y = Box_Y_Old
+					Box_X_Old = Box_X_Old_1
+					Box_Y_Old = Box_X_Old_1
+					
+					Cube_X = Cube_X_Old
+					Cube_Y = Cube_Y_Old
+					Cube_X_Old = Cube_X_Old_1
+					Cube_Y_Old = Cube_X_Old_1
+					for (let Z = 0; Z < Wall_Positions + 1; X++) {
+						screen[`${Wall_Positions[Z]}`] = Wall_Char
+					}
+				}
+			}
+			LogBoxHistory()
 			return 0
 		}
 		
@@ -247,13 +366,49 @@ function MoveBox(Dir) {
 		if (Box_X != 0) {
 		
 			Box_X -= 1
-			
+			for (let Z = 0; Z < Wall_Positions.length + 1; Z++) {
+				console.log(Wall_Positions[Z])
+				if (Wall_Positions[Z] == `X_${Box_X}_Y_${Box_Y}`) {
+					console.log("Detected Wall")
+					Box_X = Box_X_Old
+					Box_Y = Box_Y_Old
+					Box_X_Old = Box_X_Old_1
+					Box_Y_Old = Box_X_Old_1
+					
+					Cube_X = Cube_X_Old
+					Cube_Y = Cube_Y_Old
+					Cube_X_Old = Cube_X_Old_1
+					Cube_Y_Old = Cube_X_Old_1
+					for (let Z = 0; Z < Wall_Positions + 1; X++) {
+						screen[`${Wall_Positions[Z]}`] = Wall_Char
+					}
+				}
+			}
+			LogBoxHistory()
 			return Box_X
 		}
 		if (Box_X <= 0) {
 		
 			Box_X = 10
-			
+			for (let Z = 0; Z < Wall_Positions.length + 1; Z++) {
+				console.log(Wall_Positions[Z])
+				if (Wall_Positions[Z] == `X_${Box_X}_Y_${Box_Y}`) {
+					console.log("Detected Wall")
+					Box_X = Box_X_Old
+					Box_Y = Box_Y_Old
+					Box_X_Old = Box_X_Old_1
+					Box_Y_Old = Box_X_Old_1
+					
+					Cube_X = Cube_X_Old
+					Cube_Y = Cube_Y_Old
+					Cube_X_Old = Cube_X_Old_1
+					Cube_Y_Old = Cube_X_Old_1
+					for (let Z = 0; Z < Wall_Positions + 1; X++) {
+						screen[`${Wall_Positions[Z]}`] = Wall_Char
+					}
+				}
+			}
+			LogBoxHistory()
 			return Box_X
 		}
 		
@@ -262,10 +417,40 @@ function MoveBox(Dir) {
 
 function CheckForBox() {
 
+	for (let Z = 0; Z < Wall_Positions.length + 1; Z++) {
+		console.log(Wall_Positions[Z])
+		if (Wall_Positions[Z] == `X_${Cube_X}_Y_${Cube_Y}`) {
+			console.log("Detected Wall")
+			Cube_X = Cube_X_Old
+			Cube_Y = Cube_Y_Old
+			Cube_X_Old = Cube_X_Old_1
+			Cube_Y_Old = Cube_X_Old_1
+			for (let Z = 0; Z < Wall_Positions + 1; X++) {
+				screen[`${Wall_Positions[Z]}`] = Wall_Char
+			}
+		}
+	}
+
 	if (`X_${Box_X}_Y_${Box_Y}` == `X_${Cube_X}_Y_${Cube_Y}`) {
 		MoveBox(prevMoveDir)
 	}
+
+
 	
+	
+}
+
+function CheckIfBoxBlocked() {
+	if (`X_${Box_X}_Y_${Box_Y}` == `X_${Box_X_Old_1}_Y_${Box_Y_Old_1}`) {
+		Cube_X = Cube_X_Old
+		Cube_Y = Cube_Y_Old
+		Cube_X_Old = Cube_X_Old_1
+		Cube_Y_Old = Cube_X_Old_1
+		for (let Z = 0; Z < Wall_Positions + 1; X++) {
+			screen[`${Wall_Positions[Z]}`] = Wall_Char
+		}
+	}
+		
 }
 
 function MoveCube(Dir) {
@@ -306,6 +491,7 @@ function MoveCube(Dir) {
 
 			Cube_Y -= 1
 			CheckForBox()
+			
 			ChangeDisplayCube()
 
 			return Cube_Y
@@ -314,6 +500,7 @@ function MoveCube(Dir) {
 			LogCubeHistory()
 			Cube_Y = 10
 			CheckForBox()
+			
 			ChangeDisplayCube()
 			
 			return Cube_Y
@@ -327,6 +514,7 @@ function MoveCube(Dir) {
 	
 			Cube_X += 1
 			CheckForBox()
+			
 			ChangeDisplayCube()
 			
 			return 0
@@ -336,6 +524,7 @@ function MoveCube(Dir) {
 
 			Cube_X = 0
 			CheckForBox()
+			
 			ChangeDisplayCube()
 			
 			return 0
@@ -348,6 +537,7 @@ function MoveCube(Dir) {
 
 			Cube_X -= 1
 			CheckForBox()
+			
 			ChangeDisplayCube()
 			return Cube_X
 		}
@@ -356,6 +546,7 @@ function MoveCube(Dir) {
 		
 			Cube_X = 10
 			CheckForBox()
+			
 			ChangeDisplayCube()
 			return Cube_X
 		}
@@ -400,10 +591,16 @@ function ChangeDisplayCube() {
 
 	
 	
+
+
 	for (let X = 0; X < 11; X++) {
  		 for (let Y = 0; Y < 11; Y++) {
   			screen[`X_${X}_Y_${Y}`] = Empty
 		}
+	}
+
+	for (let Z = 0; Z < Wall_Positions.length + 1; Z++) {
+		screen[`${Wall_Positions[Z]}`] = Wall_Char
 	}
 
 	screen[`X_${Cube_X}_Y_${Cube_Y}`] = Cube_Char
