@@ -276,9 +276,11 @@ function MoveCube(Dir) {
 
 		if (Cube_Y != 10) {
 			LogCubeHistory()
-			CheckForBox()
+
 			
 			Cube_Y += 1
+
+			CheckForBox()
 			
 			ChangeDisplayCube()
 			return Cube_Y
@@ -286,9 +288,11 @@ function MoveCube(Dir) {
 		if (Cube_Y == 10) {
 			
 			LogCubeHistory()
-			CheckForBox()
+
 			
 			Cube_Y = 0
+
+			CheckForBox()
 			
 			ChangeDisplayCube()
 			
@@ -299,16 +303,17 @@ function MoveCube(Dir) {
 		
 		if (Cube_Y != 0) {
 			LogCubeHistory()
-			CheckForBox()
+
 			Cube_Y -= 1
+			CheckForBox()
 			ChangeDisplayCube()
 
 			return Cube_Y
 		}
 		if (Cube_Y <= 0) {
 			LogCubeHistory()
-			CheckForBox()
 			Cube_Y = 10
+			CheckForBox()
 			ChangeDisplayCube()
 			
 			return Cube_Y
@@ -319,16 +324,18 @@ function MoveCube(Dir) {
 
 		if (Cube_X != 10) {
 			LogCubeHistory()
-			CheckForBox()
+	
 			Cube_X += 1
+			CheckForBox()
 			ChangeDisplayCube()
 			
 			return 0
 		}
 		if (Cube_X >= 10) {
 			LogCubeHistory()
-			CheckForBox()
+
 			Cube_X = 0
+			CheckForBox()
 			ChangeDisplayCube()
 			
 			return 0
@@ -338,15 +345,17 @@ function MoveCube(Dir) {
 	if (Dir == "Right") {
 		if (Cube_X != 0) {
 			LogCubeHistory()
-			CheckForBox()	
+
 			Cube_X -= 1
+			CheckForBox()
 			ChangeDisplayCube()
 			return Cube_X
 		}
 		if (Cube_X <= 0) {
 			LogCubeHistory()
-			CheckForBox()
+		
 			Cube_X = 10
+			CheckForBox()
 			ChangeDisplayCube()
 			return Cube_X
 		}
