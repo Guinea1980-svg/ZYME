@@ -54,7 +54,7 @@ let Wall_Positions = [`X_4_Y_0`,`X_4_Y_1`,`X_4_Y_2`,`X_0_Y_3`,`X_1_Y_3`,`X_2_Y_3
 let Wall_Char = "⬛"
 
 let Score = 0
-let High_Score = 0aa
+let High_Score = 0
 
 let Empty = "⬜"
 
