@@ -50,7 +50,7 @@ let Box_X = 3
 let Box_Y = 3
 
 let Box_Char = "🟫"
-let Wall_Positions = [`X_4_Y_0`,`X_4_Y_1`,`X_4_Y_2`,`X_0_Y_3`,`X_1_Y_3`,`X_2_Y_3`,`X_2_Y_9`,`X_2_Y_5`,`X_3_Y_5`,`X_4_Y_5`,`X_5_Y_5`,`X_5_Y_4`,`X_5_Y_3`,`X_2_Y_6`,`X_2_Y_7`,`X_2_Y_8`,`X_10_Y_4`,]
+let Wall_Positions = [`X_4_Y_0`,`X_4_Y_1`,`X_4_Y_2`,`X_0_Y_3`,`X_1_Y_3`,`X_2_Y_3`,`X_2_Y_9`,`X_2_Y_5`,`X_3_Y_5`,`X_4_Y_5`,`X_5_Y_5`,`X_5_Y_4`,`X_5_Y_3`,`X_2_Y_6`,`X_2_Y_7`,`X_2_Y_8`]
 let Wall_Char = "⬛"
 
 let Score = 0
