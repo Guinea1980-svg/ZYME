@@ -1,4 +1,5 @@
 .card {
+  pointer-events: none;
   position: relative;
   width: 567px;
   height: 493px;
@@ -27,6 +28,7 @@
 }
 
 .card::after {
+  pointer-events: none;
   content: "";
   z-index: -1;
   position: absolute;
@@ -44,12 +46,14 @@
 }
 
 .card p:not(.heading) {
+  pointer-events: none;
   font: 60px Arial, sans-serif;50px
   Arial, font-family: sans-serif;
   color: white;
 }
 
 .card p:last-child {
+  pointer-events: none;
   color: #dc00f5;
   font-weight: 600;
 }
