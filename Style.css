@@ -131,6 +131,7 @@
   border-color: #333 transparent transparent transparent;
 }
 .button_download {
+  text-decoration: none;
   font-size: 1.5rem;
   color: #fafafa;
   text-transform: uppercase;
