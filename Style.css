@@ -9,7 +9,6 @@
   padding: 12px;
   gap: 12px;
   border-radius: 8px;
-  cursor: pointer;
 }
 
 .card::before {
