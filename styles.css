@@ -8,15 +8,17 @@ body {
 
   /* Dark mode colors and gradient */
   background: #121212; /* Fallback for browsers that don't support gradients */
+  --Color_1: #121212;
+  --Color_2: #1a1a1a;
   background: linear-gradient(
     135deg,
-    #121212 25%,
-    #1a1a1a 25%,
-    #1a1a1a 50%,
-    #121212 50%,
-    #121212 75%,
-    #1a1a1a 75%,
-    #1a1a1a
+    --Color_1 25%,
+    --Color_2 25%,
+    --Color_2 50%,
+    --Color_1 50%,
+    --Color_1 75%,
+    --Color_2 75%,
+    --Color_2
   );
   background-size: 40px 40px;
 
