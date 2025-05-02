@@ -12,13 +12,13 @@ body {
   --Color_2: #1a1a1a;
   background: linear-gradient(
     135deg,
-    --Color_1 25%,
-    --Color_2 25%,
-    --Color_2 50%,
-    --Color_1 50%,
-    --Color_1 75%,
-    --Color_2 75%,
-    --Color_2
+    var(--Color_1) 25%,
+    var(--Color_2) 25%,
+    var(--Color_2) 50%,
+    var(--Color_1) 50%,
+    var(--Color_1) 75%,
+    var(--Color_2) 75%,
+    var(--Color_2)
   );
   background-size: 40px 40px;
 
