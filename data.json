@@ -1,5 +1,6 @@
 {
   "name": "Lydney",
+  "code": "console.log(`hello`)",
   "location": "South Gloucestershire",
   "population": 15000
 }
