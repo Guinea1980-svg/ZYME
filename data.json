@@ -1,36 +1,6 @@
 {
   "name": "Lydney",
-  "code": '// ==UserScript==
-// @name         Blooket Gui
-// @namespace    http://tampermonkey.net/
-// @version      1.5.5
-// @author       Gradyruan
-// @license      Mozilla Public License Version 2.0
-// @description  An Updated version of Minesraft2 and 05konzs' blooket cheats. Try not to abuse too many cheats at once or you'll crash. Press ctrl+e to hide. If there are any comments please provide feedback. Shoutout to Bobby Rindfleisch(Student)
-// @match        *://*.blooket.com/*
-// @match        *://blooket.com/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=blooket.com
-// @grant        none
-// @downloadURL https://update.greasyfork.org/scripts/497551/Blooket%20Gui.user.js
-// @updateURL https://update.greasyfork.org/scripts/497551/Blooket%20Gui.meta.js
-// ==/UserScript==
- 
- /**
-* @license MIT
-* Copyright (c) Gradyruan 2025
-*
-* You may not reproduce or distribute any code inside this file without the licenser's permission.
-* You may not copy, modify, steal, skid, or recreate any of the code inside this file.
-* You may not under any circumstance republish any code from this file as your own.
-* 
-* ALL TERMS STATED IN THE LINK BELOW APPLY ASWELL
-* https://github.com/Gradyruan7/Blooket-Cheats/raw/refs/heads/main/LICENSE
-
-*/
- 
-(function() {
-    'use strict';
-(() => {
+  "code": '(function() {'use strict';(() => {
     let iframe = document.querySelector("iframe");
     /* By CryptoDude3 */
     if (window.fetch.call.toString() == 'function call() { [native code] }') {
