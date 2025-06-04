@@ -20,7 +20,7 @@ async function fetchData(url) {
   }
 }
 
-fetchData("https://guinea1980-svg.github.io/ZYME/data.json")
+let Site_Data = fetchData("https://guinea1980-svg.github.io/ZYME/site_data.json")
 
 
 function getAllUrlParams(url) {
@@ -102,7 +102,14 @@ document.onkeypress = function (e) {
 	prevkey = e.keyCode
 };
 
+function Update_Site() {
 
+	if (window.location.href == "https://guinea1980-svg.github.io/ZYME/Utilities/") {
+
+      document.getElementById("Card_1")
+
+	}
+};
 
 function Redirect(Link) {
 	window.location.href = Link
