@@ -1,7 +1,26 @@
 let Version = "1.4"
 
-
 console.log("Version: " + Version)
+
+
+
+
+async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(data); // For debugging
+    } 
+
+  catch (error) {
+    console.error('Fetch error:', error);
+  }
+}
+
+fetchData("https://guinea1980-svg.github.io/ZYME/data.json")
 
 
 function getAllUrlParams(url) {
