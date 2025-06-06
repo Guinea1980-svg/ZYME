@@ -9,8 +9,8 @@ function Update_Site(data) {
 
   let Util = data.util
 
-  for (let index = 1; index < 5; index++) {
-    let indexed = Object.keys(Util)[index]
+  for (let index = 1; index < Util.length; index++) {
+    let indexed = Util[index]
     if (indexed.type != "Download") {
       
       let div = document.getElementsByClassName("card")[index]
