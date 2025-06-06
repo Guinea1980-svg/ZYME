@@ -5,9 +5,9 @@ console.log("Version: " + Version)
 
 let Site_Data 
 
-function Update_Site() {
+function Update_Site(data) {
 
-  let Util = Site_Data.util
+  let Util = data.util
 
   for (let index = 0; index < 5; index++) {
     let indexed = Object.keys(Util)[index]
@@ -48,7 +48,7 @@ async function fetchData(url) {
     Site_Data = data
     console.log(`Data Version: ${data.version}`)
     console.log(`Data: ${Site_Data}`)
-    Update_Site()
+    Update_Site(data)
     } 
 
   catch (error) {
