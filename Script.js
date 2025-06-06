@@ -3,7 +3,7 @@ let Version = "1.6"
 console.log("Version: " + Version)
 
 
-
+let Site_Data 
 
 async function fetchData(url) {
   try {
@@ -12,7 +12,8 @@ async function fetchData(url) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     const data = await response.json();
-    console.log(data); // For debugging
+    Site_Data = data
+    console.log(`Data Version: ${data.version}`)
     } 
 
   catch (error) {
@@ -20,8 +21,7 @@ async function fetchData(url) {
   }
 }
 
-let Site_Data = fetchData("https://guinea1980-svg.github.io/ZYME/site_data.json")
-
+fetchData("https://guinea1980-svg.github.io/ZYME/site_data.json")
 
 function getAllUrlParams(url) {
 
@@ -104,12 +104,40 @@ document.onkeypress = function (e) {
 
 function Update_Site() {
 
-	if (window.location.href == "https://guinea1980-svg.github.io/ZYME/Utilities/") {
+  console.log(Site_Data)
 
-      document.getElementById("Card_1")
+  let Util = Site_Data.util
 
+  for (let index = 0; index < 5; index++) {
+    let indexed = Object.keys(Util)[index]
+    if (indexed.type != "Download") {
+      
+      let div = document.getElementsByClassName("card")[index]
+      let div_button
+      for (let number = 0; number < div.childNodes.length; number++) { 
+
+        if (div.childNodes[number].className == "button_download") {
+
+          div_button = div.childNodes[number]
+
+        }
+
+      }
+
+      console.log(div_button.onclick)
+      console.log(indexed.link)
+      console.log(indexed.title)
+      console.log(indexed.description)
+      console.log(indexed.status)
+      console.log(indexed.type)
+
+      div_button.onclick = `NewTabLink(&quot;${indexed.link}&quot;)`
+      
+    }  
 	}
 };
+
+Update_Site()
 
 function Redirect(Link) {
 	window.location.href = Link
