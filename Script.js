@@ -14,6 +14,7 @@ async function fetchData(url) {
     const data = await response.json();
     Site_Data = data
     console.log(`Data Version: ${data.version}`)
+    console.log(`Data: ${Site_Data}`)
     } 
 
   catch (error) {
