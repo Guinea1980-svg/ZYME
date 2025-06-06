@@ -9,7 +9,7 @@ function Update_Site(data) {
 
   let Util = data.util
 
-  for (let index = 0; index < 5; index++) {
+  for (let index = 1; index < 5; index++) {
     let indexed = Object.keys(Util)[index]
     if (indexed.type != "Download") {
       
