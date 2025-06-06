@@ -5,6 +5,39 @@ console.log("Version: " + Version)
 
 let Site_Data 
 
+function Update_Site() {
+
+  let Util = Site_Data.util
+
+  for (let index = 0; index < 5; index++) {
+    let indexed = Object.keys(Util)[index]
+    if (indexed.type != "Download") {
+      
+      let div = document.getElementsByClassName("card")[index]
+      let div_button
+      for (let number = 0; number < div.childNodes.length; number++) { 
+
+        if (div.childNodes[number].className == "button_download") {
+
+          div_button = div.childNodes[number]
+
+        }
+
+      }
+
+      console.log(div_button.onclick)
+      console.log(indexed.link)
+      console.log(indexed.title)
+      console.log(indexed.description)
+      console.log(indexed.status)
+      console.log(indexed.type)
+
+      div_button.onclick = `NewTabLink(&quot;${indexed.link}&quot;)`
+      
+    }  
+	}
+};
+
 async function fetchData(url) {
   try {
     const response = await fetch(url);
@@ -15,6 +48,7 @@ async function fetchData(url) {
     Site_Data = data
     console.log(`Data Version: ${data.version}`)
     console.log(`Data: ${Site_Data}`)
+    Update_Site()
     } 
 
   catch (error) {
@@ -103,42 +137,7 @@ document.onkeypress = function (e) {
 	prevkey = e.keyCode
 };
 
-function Update_Site() {
 
-  console.log(Site_Data)
-
-  let Util = Site_Data.util
-
-  for (let index = 0; index < 5; index++) {
-    let indexed = Object.keys(Util)[index]
-    if (indexed.type != "Download") {
-      
-      let div = document.getElementsByClassName("card")[index]
-      let div_button
-      for (let number = 0; number < div.childNodes.length; number++) { 
-
-        if (div.childNodes[number].className == "button_download") {
-
-          div_button = div.childNodes[number]
-
-        }
-
-      }
-
-      console.log(div_button.onclick)
-      console.log(indexed.link)
-      console.log(indexed.title)
-      console.log(indexed.description)
-      console.log(indexed.status)
-      console.log(indexed.type)
-
-      div_button.onclick = `NewTabLink(&quot;${indexed.link}&quot;)`
-      
-    }  
-	}
-};
-
-Update_Site()
 
 function Redirect(Link) {
 	window.location.href = Link
