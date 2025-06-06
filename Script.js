@@ -10,30 +10,35 @@ function Update_Site(data) {
   let Util = data.util
 
   for (let index = 1; index < Util.length; index++) {
+
+    console.log(index)
+
     let indexed = Util[index]
+
+    console.log(indexed)
+
     if (indexed.type != "Download") {
-      
+
       let div = document.getElementsByClassName("card")[index]
       let div_button
-      for (let number = 0; number < div.childNodes.length; number++) { 
+
+      for (let number = 0; number <= div.childNodes.length; number++) { 
 
         if (div.childNodes[number].className == "button_download") {
 
           div_button = div.childNodes[number]
 
+          console.log(div_button.onclick)
+          console.log(indexed.link)
+          console.log(indexed.title)
+          console.log(indexed.description)
+          console.log(indexed.status)
+          console.log(indexed.type)
+
+          div.childNodes[number].onclick = `NewTabLink(&quot;${indexed.link}&quot;)`
+
         }
-
       }
-
-      console.log(div_button.onclick)
-      console.log(indexed.link)
-      console.log(indexed.title)
-      console.log(indexed.description)
-      console.log(indexed.status)
-      console.log(indexed.type)
-
-      div_button.onclick = `NewTabLink(&quot;${indexed.link}&quot;)`
-      
     }  
 	}
 };
