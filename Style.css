@@ -81,8 +81,7 @@
 
 .card p:not(.heading) {
   pointer-events: none;
-  font: 60px Arial, sans-serif;50px
-  Arial, font-family: sans-serif;
+  font: 60px Arial, sans-serif, 50px, Arial;
   color: white;
 }
 
@@ -187,7 +186,7 @@
 }
 
 .flex-container {
-  display: column
+  display: column;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -259,6 +258,19 @@
 	vertical-align: center;
 	font: 25px Arial, sans-serif;
 }
+
+.Status_Working {
+	color: rgb(30, 255, 0);
+	vertical-align: center;
+	font: 25px Arial, sans-serif;
+}
+
+.Status_NotWorking {
+	color: rgb(255, 0, 0);
+	vertical-align: center;
+	font: 25px Arial, sans-serif;
+}
+
 .text_white {
 	color: white;
 	vertical-align: center;
