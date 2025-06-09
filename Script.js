@@ -20,10 +20,9 @@ function Update_Site(data) {
     if (indexed.type != "Download") {
 
       let div = document.getElementsByClassName("card")[index]
-      let div_button
 
 
-      for (let number = 0; number >= div.childNodes.length; number++) {
+      for (let number = 0; number > div.childNodes.length; number++) {
 
         console.log(div.childNodes[number])
 
