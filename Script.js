@@ -28,8 +28,6 @@ function Update_Site(data) {
         console.log(div.childNodes[number])
 
         if (div.childNodes[number]) {
-          if (div.childNodes) {
-            div_button = div.childNodes[number]
 
             console.log(div_button.onclick)
             console.log(indexed.link)
@@ -38,7 +36,20 @@ function Update_Site(data) {
             console.log(indexed.status)
             console.log(indexed.type)
 
+          if (div.childNodes[number].class == "button_download") {
+
             div.childNodes[number].onclick = `NewTabLink(&quot;${indexed.link}&quot;)`
+
+          }
+
+          if (div.childNodes[number].class == "text2") {
+            div.childNodes[number].innerHTML= indexed.title
+          }
+          if (div.childNodes[number].class == "text3") {
+            div.childNodes[number].innerHTML= indexed.description
+          }
+          if (div.childNodes[number].id == "Status") {
+            div.childNodes[number].innerHTML= indexed.status
           }
 
         }
