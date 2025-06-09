@@ -3,7 +3,7 @@ let Version = "1.6"
 console.log("Version: " + Version)
 
 
-let Site_Data 
+let Site_Data
 
 function Update_Site(data) {
 
@@ -22,25 +22,29 @@ function Update_Site(data) {
       let div = document.getElementsByClassName("card")[index]
       let div_button
 
-      for (let number = 0; number <= div.childNodes.length; number++) { 
 
-        if (div.childNodes[number].className == "button_download") {
+      for (let number = 0; number >= div.childNodes.length; number++) {
 
-          div_button = div.childNodes[number]
+        console.log(div.childNodes[number])
 
-          console.log(div_button.onclick)
-          console.log(indexed.link)
-          console.log(indexed.title)
-          console.log(indexed.description)
-          console.log(indexed.status)
-          console.log(indexed.type)
+        if (div.childNodes[number]) {
+          if (div.childNodes) {
+            div_button = div.childNodes[number]
 
-          div.childNodes[number].onclick = `NewTabLink(&quot;${indexed.link}&quot;)`
+            console.log(div_button.onclick)
+            console.log(indexed.link)
+            console.log(indexed.title)
+            console.log(indexed.description)
+            console.log(indexed.status)
+            console.log(indexed.type)
+
+            div.childNodes[number].onclick = `NewTabLink(&quot;${indexed.link}&quot;)`
+          }
 
         }
       }
-    }  
-	}
+    }
+  }
 };
 
 async function fetchData(url) {
@@ -54,7 +58,7 @@ async function fetchData(url) {
     console.log(`Data Version: ${data.version}`)
     console.log(`Data: ${Site_Data}`)
     Update_Site(data)
-    } 
+  }
 
   catch (error) {
     console.error('Fetch error:', error);
@@ -113,7 +117,7 @@ function getAllUrlParams(url) {
         if (!obj[paramName]) {
           // if it doesn't exist, create property
           obj[paramName] = paramValue;
-        } else if (obj[paramName] && typeof obj[paramName] === 'string'){
+        } else if (obj[paramName] && typeof obj[paramName] === 'string') {
           // if property does exist and it's a string, convert it to an array
           obj[paramName] = [obj[paramName]];
           obj[paramName].push(paramValue);
@@ -130,25 +134,25 @@ function getAllUrlParams(url) {
 
 
 document.onkeypress = function (e) {
-	e = e || window.event;
-	console.log(e)
-	prevkey = e.key
-	if (prevkey == "p") {
-		if (e.key == "d" ) {
-			window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/guyinsuite.webp"
-		
-		}
-	}
-	prevkey = e.keyCode
+  e = e || window.event;
+  console.log(e)
+  prevkey = e.key
+  if (prevkey == "p") {
+    if (e.key == "d") {
+      window.location.href = "https://guinea1980-svg.github.io/ZYME/ZYME/gggg/guyinsuite.webp"
+
+    }
+  }
+  prevkey = e.keyCode
 };
 
 
 
 function Redirect(Link) {
-	window.location.href = Link
+  window.location.href = Link
 };
 
 function NewTabLink(url) {
 
-	window.open(url, '_blank').focus();
+  window.open(url, '_blank').focus();
 };
