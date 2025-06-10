@@ -31,9 +31,13 @@ function Update_Site(data) {
 
           console.log(data.util[index + 1].link)
 
-           document.getElementsByClassName("card")[index].children[number].onclick = `NewTabLink(&quot;${data.util[index + 1].link}&quot;)`
+          document.getElementsByClassName("card")[index].children[number].onclick = `NewTabLink("${data.util[index + 1].link}")`
 
         }
+      }
+      if (document.getElementsByClassName("card")[index].children[number].className == "button_download") {
+        console.log(data.util[index + 1].button_text)
+        document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].button_text
       }
       if (document.getElementsByClassName("card")[index].children[number].className == "text2") {
 
