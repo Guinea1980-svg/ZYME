@@ -27,21 +27,21 @@ function Update_Site(data) {
 
         console.log(document.getElementsByClassName("card")[index].children[number])
 
-        if (document.getElementsByClassName("card")[index].children[number].class == "button_download") {
+        if (document.getElementsByClassName("card")[index].children[number].className == "button_download") {
 
           console.log(data.util[index + 1].link)
 
           document.getElementsByClassName("card")[index].children[number].onclick = `NewTabLink(&quot;${data.util[index + 1].link}&quot;)`
 
         }
-        if (document.getElementsByClassName("card")[index].children[number].class == "text2") {
+        if (document.getElementsByClassName("card")[index].children[number].className == "text2") {
 
           console.log(data.util[index + 1].title)
 
           document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].title
 
         }
-        if (document.getElementsByClassName("card")[index].children[number].class == "text3") {
+        if (document.getElementsByClassName("card")[index].children[number].className == "text3") {
 
           console.log(data.util[index + 1].description)
 
