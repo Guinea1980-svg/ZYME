@@ -16,7 +16,7 @@ function Update_Site(data) {
 
     console.log(data.util[index])
 
-    if (data.util[index].type != "Download") {
+    if (data.util[index].type == "Link") {
 
       let div = document.getElementsByClassName("card")[index]
 
