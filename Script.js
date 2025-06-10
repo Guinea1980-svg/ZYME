@@ -13,43 +13,40 @@ function Update_Site(data) {
 
     console.log(index)
 
-    let indexed = Util[index]
 
-    console.log(indexed)
+    console.log(data.util[index])
 
-    if (indexed.type != "Download") {
+    if (data.util[index].type != "Download") {
 
       let div = document.getElementsByClassName("card")[index]
 
 
-      for (let number = 0; number > div.childNodes.length; number++) {
+      for (let number = 0; number > document.getElementsByClassName("card")[index].childNodes.length; number++) {
 
-        console.log(div.childNodes[number])
+        console.log(document.getElementsByClassName("card")[index].childNodes[number])
+        console.log(data.util[index].link)
+        console.log(data.util[index].title)
+        console.log(data.util[index].description)
+        console.log(data.util[index].status)
+        console.log(data.util[index].type)
+        if (document.getElementsByClassName("card")[index].childNodes[number].class == "button_download") {
 
-        if (div.childNodes[number]) {
+          document.getElementsByClassName("card")[index].childNodes[number].onclick = `NewTabLink(&quot;${data.util[index].link}&quot;)`
 
-            console.log(div_button.onclick)
-            console.log(indexed.link)
-            console.log(indexed.title)
-            console.log(indexed.description)
-            console.log(indexed.status)
-            console.log(indexed.type)
+        }
+        if (document.getElementsByClassName("card")[index].childNodes[number].class == "text2") {
 
-          if (div.childNodes[number].class == "button_download") {
+          document.getElementsByClassName("card")[index].childNodes[number].innerHTML= data.util[index].title
 
-            div.childNodes[number].onclick = `NewTabLink(&quot;${indexed.link}&quot;)`
+        }
+        if (document.getElementsByClassName("card")[index].childNodes[number].class == "text3") {
 
-          }
+          document.getElementsByClassName("card")[index].childNodes[number].innerHTML= data.util[index].description
 
-          if (div.childNodes[number].class == "text2") {
-            div.childNodes[number].innerHTML= indexed.title
-          }
-          if (div.childNodes[number].class == "text3") {
-            div.childNodes[number].innerHTML= indexed.description
-          }
-          if (div.childNodes[number].id == "Status") {
-            div.childNodes[number].innerHTML= indexed.status
-          }
+        }
+        if (document.getElementsByClassName("card")[index].childNodes[number].id == "Status") {
+
+         document.getElementsByClassName("card")[index].childNodes[number].innerHTML= data.util[index].status
 
         }
       }
