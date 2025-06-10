@@ -21,32 +21,33 @@ function Update_Site(data) {
       let div = document.getElementsByClassName("card")[index]
 
 
-      for (let number = 0; number < document.getElementsByClassName("card")[index].childNodes.length; number++) {
+      for (let number = 0; number < document.getElementsByClassName("card")[index].children.length; number++) {
 
-        console.log(document.getElementsByClassName("card")[index].childNodes[number])
+        console.log(document.getElementsByClassName("card")[index].children[number])
         console.log(data.util[index].link)
         console.log(data.util[index].title)
         console.log(data.util[index].description)
         console.log(data.util[index].status)
         console.log(data.util[index].type)
-        if (document.getElementsByClassName("card")[index].childNodes[number].class == "button_download") {
+        
+        if (document.getElementsByClassName("card")[index].children[number].class == "button_download") {
 
-          document.getElementsByClassName("card")[index].childNodes[number].onclick = `NewTabLink(&quot;${data.util[index].link}&quot;)`
-
-        }
-        if (document.getElementsByClassName("card")[index].childNodes[number].class == "text2") {
-
-          document.getElementsByClassName("card")[index].childNodes[number].innerHTML= data.util[index].title
+          document.getElementsByClassName("card")[index].children[number].onclick = `NewTabLink(&quot;${data.util[index].link}&quot;)`
 
         }
-        if (document.getElementsByClassName("card")[index].childNodes[number].class == "text3") {
+        if (document.getElementsByClassName("card")[index].children[number].class == "text2") {
 
-          document.getElementsByClassName("card")[index].childNodes[number].innerHTML= data.util[index].description
+          document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index].title
 
         }
-        if (document.getElementsByClassName("card")[index].childNodes[number].id == "Status") {
+        if (document.getElementsByClassName("card")[index].children[number].class == "text3") {
 
-         document.getElementsByClassName("card")[index].childNodes[number].innerHTML= data.util[index].status
+          document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index].description
+
+        }
+        if (document.getElementsByClassName("card")[index].children[number].id == "Status") {
+
+         document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index].status
 
         }
       }
