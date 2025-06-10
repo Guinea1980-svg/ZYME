@@ -9,7 +9,7 @@ function Update_Site(data) {
 
   let Util = data.util
 
-  for (let index = 1; index < Util.length; index++) {
+  for (let index = 1; index < Util.length - 1; index++) {
 
     console.log(index)
 
@@ -21,7 +21,7 @@ function Update_Site(data) {
       let div = document.getElementsByClassName("card")[index]
 
 
-      for (let number = 0; number > document.getElementsByClassName("card")[index].childNodes.length; number++) {
+      for (let number = 0; number < document.getElementsByClassName("card")[index].childNodes.length; number++) {
 
         console.log(document.getElementsByClassName("card")[index].childNodes[number])
         console.log(data.util[index].link)
