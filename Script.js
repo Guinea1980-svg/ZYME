@@ -16,45 +16,44 @@ function Update_Site(data) {
 
     console.log(data.util[index + 1])
 
-    if (data.util[index + 1].type == "Link") {
 
-      let div = document.getElementsByClassName("card")[index]
+    let div = document.getElementsByClassName("card")[index]
 
-      console.log(data.util[index + 1].type)
+    console.log(data.util[index + 1].type)
 
 
-      for (let number = 0; number < document.getElementsByClassName("card")[index].children.length; number++) {
+    for (let number = 0; number < document.getElementsByClassName("card")[index].children.length; number++) {
 
-        console.log(document.getElementsByClassName("card")[index].children[number])
+      console.log(document.getElementsByClassName("card")[index].children[number])
+      if (data.util[index + 1].type == "Link") {
 
         if (document.getElementsByClassName("card")[index].children[number].className == "button_download") {
 
           console.log(data.util[index + 1].link)
 
-          document.getElementsByClassName("card")[index].children[number].onclick = `NewTabLink(&quot;${data.util[index + 1].link}&quot;)`
+           document.getElementsByClassName("card")[index].children[number].onclick = `NewTabLink(&quot;${data.util[index + 1].link}&quot;)`
 
         }
-        if (document.getElementsByClassName("card")[index].children[number].className == "text2") {
+      }
+      if (document.getElementsByClassName("card")[index].children[number].className == "text2") {
 
-          console.log(data.util[index + 1].title)
+        console.log(data.util[index + 1].title)
 
-          document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].title
+        document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].title
+      }
+      if (document.getElementsByClassName("card")[index].children[number].className == "text3") {
 
-        }
-        if (document.getElementsByClassName("card")[index].children[number].className == "text3") {
+        console.log(data.util[index + 1].description)
 
-          console.log(data.util[index + 1].description)
+        document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].description
 
-          document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].description
+      }
+      if (document.getElementsByClassName("card")[index].children[number].id == "Status") {
 
-        }
-        if (document.getElementsByClassName("card")[index].children[number].id == "Status") {
+        console.log(data.util[index + 1].status)
 
-          console.log(data.util[index + 1].status)
+        document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].status
 
-          document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].status
-
-        }
       }
     }
   }
