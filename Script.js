@@ -14,13 +14,13 @@ function Update_Site(data) {
     console.log(index)
 
 
-    console.log(data.util[index])
+    console.log(data.util[index + 1])
 
-    if (data.util[index].type == "Link") {
+    if (data.util[index + 1].type == "Link") {
 
       let div = document.getElementsByClassName("card")[index]
 
-      console.log(data.util[index].type)
+      console.log(data.util[index + 1].type)
 
 
       for (let number = 0; number < document.getElementsByClassName("card")[index].children.length; number++) {
@@ -29,28 +29,28 @@ function Update_Site(data) {
 
         if (document.getElementsByClassName("card")[index].children[number].class == "button_download") {
 
-          console.log(data.util[index].link)
+          console.log(data.util[index + 1].link)
 
           document.getElementsByClassName("card")[index].children[number].onclick = `NewTabLink(&quot;${data.util[index + 1].link}&quot;)`
 
         }
         if (document.getElementsByClassName("card")[index].children[number].class == "text2") {
 
-          console.log(data.util[index].title)
+          console.log(data.util[index + 1].title)
 
           document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].title
 
         }
         if (document.getElementsByClassName("card")[index].children[number].class == "text3") {
 
-          console.log(data.util[index].description)
+          console.log(data.util[index + 1].description)
 
           document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].description
 
         }
         if (document.getElementsByClassName("card")[index].children[number].id == "Status") {
 
-          console.log(data.util[index].status)
+          console.log(data.util[index + 1].status)
 
           document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].status
 
