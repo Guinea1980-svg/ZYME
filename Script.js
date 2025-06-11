@@ -21,7 +21,7 @@ function Update_Site(data) {
 
     console.log(data.util[index + 1].type)
 
-    if (window.location.href == "https://guinea1980-svg.github.io/ZYME/Utilities/")) {
+    if (window.location.href == "https://guinea1980-svg.github.io/ZYME/Utilities/") {
       for (let number = 0; number < document.getElementsByClassName("card")[index].children.length; number++) {
 
         console.log(document.getElementsByClassName("card")[index].children[number])
@@ -61,7 +61,7 @@ function Update_Site(data) {
         }
       }
     }
-    if (window.location.href == "https://guinea1980-svg.github.io/ZYME/Proxies/")) {
+    if (window.location.href == "https://guinea1980-svg.github.io/ZYME/Proxies/") {
       for (let number = 0; number < document.getElementsByClassName("card")[index].children.length; number++) {
 
         console.log(document.getElementsByClassName("card")[index].children[number])
