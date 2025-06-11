@@ -31,7 +31,7 @@ function Update_Site(data) {
 
             console.log(data.util[index + 1].link)
 
-            document.getElementsByClassName("card")[index].children[number].onclick = NewTabLink(${data.util[index + 1].link})
+            document.getElementsByClassName("card")[index].children[number].onclick = `window.open(${data.util[index].link}, '_blank')`
 
           }
         }
@@ -71,7 +71,7 @@ function Update_Site(data) {
 
             console.log(data.prox[index + 1].link)
 
-            document.getElementsByClassName("card")[index].children[number].onclick = NewTabLink(${data.prox[index + 1].link})
+            document.getElementsByClassName("card")[index].children[number].onclick = `window.open(${data.prox[index].link}, '_blank')`
 
           }
         }
