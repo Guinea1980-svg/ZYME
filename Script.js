@@ -174,3 +174,29 @@ function NewTabLink(url) {
 
   window.open(url, '_blank').focus();
 };
+
+
+
+
+
+https://app.senecalearning.com/classroom/course/6b76a6e0-cf79-11e7-83a9-29a486db2c9f/section/82f547f0-f6f6-11e7-8c22-f766c100d7f6/session
+
+
+fetch("https://www.senai.uk/api/seneca-proxy?course=6b76a6e0-cf79-11e7-83a9-29a486db2c9f&section=82f547f0-f6f6-11e7-8c22-f766c100d7f6", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+    "sec-ch-ua": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://www.senai.uk/seneca",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+});
