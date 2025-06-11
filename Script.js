@@ -31,7 +31,7 @@ function Update_Site(data) {
 
           console.log(data.util[index + 1].link)
 
-          document.getElementsByClassName("card")[index].children[number].onclick = `NewTabLink("${data.util[index + 1].link}")`
+          document.getElementsByClassName("card")[index].children[number].onclick = "NewTabLink(`${data.util[index + 1].link}`)"
 
         }
       }
@@ -169,6 +169,8 @@ function Redirect(Link) {
 };
 
 function NewTabLink(url) {
+
+  console.log(url)
 
   window.open(url, '_blank').focus();
 };
