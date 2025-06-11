@@ -31,9 +31,12 @@ function Update_Site(data) {
 
             console.log(data.util[index + 1].link)
 
-            document.getElementsByClassName("card")[index].children[number].onclick = `window.open(${data.util[index].link}, '_blank')`
+            document.getElementsByClassName("card")[index].children[number].addEventListener("click", function () {
 
-          }
+                window.open(data.util[index + 1].link, '_blank')
+
+              })
+            }
         }
         if (document.getElementsByClassName("card")[index].children[number].className == "button_download") {
           console.log(data.util[index + 1].button_text)
@@ -71,7 +74,11 @@ function Update_Site(data) {
 
             console.log(data.prox[index + 1].link)
 
-            document.getElementsByClassName("card")[index].children[number].onclick = `window.open(${data.prox[index].link}, '_blank')`
+            document.getElementsByClassName("card")[index].children[number].addEventListener("click", function () {
+
+                window.open(data.prox[index + 1].link, '_blank')
+                
+              })
 
           }
         }
