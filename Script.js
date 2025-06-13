@@ -14,98 +14,39 @@ function Update_Site(data) {
     console.log(index)
 
 
-    console.log(data.util[index + 1])
+    console.log(indexed)
+    console.log(indexed.link)
+    console.log(indexed.title)
+    console.log(indexed.description)
+    console.log(indexed.status)
+    console.log(indexed.type)
 
+    console.log(document.getElementsByClassName("card")[index])
 
-    let div = document.getElementsByClassName("card")[index]
+  let div = document.getElementsByClassName("card")[index]
 
     console.log(data.util[index + 1].type)
 
-    if (window.location.href == "https://guinea1980-svg.github.io/ZYME/Utilities/") {
-      for (let number = 0; number < document.getElementsByClassName("card")[index].children.length; number++) {
+    for (let number = 0; number > div.childNodes.length; number++) {
 
-        console.log(document.getElementsByClassName("card")[index].children[number])
-        if (data.util[index + 1].type == "Link") {
 
-          if (document.getElementsByClassName("card")[index].children[number].className == "button_download") {
 
-            console.log(data.util[index + 1].link)
+      if (document.getElementsByClassName("card")[index].childNodes[number]) {
+<<<<<<< HEAD
+>>>>>>> 24e743d544d970f0f959e3194fe642923553cdb6
 
-            document.getElementsByClassName("card")[index].children[number].addEventListener("click", function () {
-
-                window.open(data.util[index + 1].link, '_blank')
-
-              })
-            }
+          document.getElementsByClassName("card")[index].childNodes[number].onclick = `NewTabLink(&quot;${indexed.link}&quot;)`
         }
-        if (document.getElementsByClassName("card")[index].children[number].className == "button_download") {
-          console.log(data.util[index + 1].button_text)
-          document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].button_text
+        if (document.getElementsByClassName("card")[index].childNodes[number].class == "text2") {
+          document.getElementsByClassName("card")[index].childNodes[number].innerHTML= indexed.title
         }
-        if (document.getElementsByClassName("card")[index].children[number].className == "text2") {
-
-         console.log(data.util[index + 1].title)
-
-          document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].title
+        if (document.getElementsByClassName("card")[index].childNodes[number].class == "text3") {
+          document.getElementsByClassName("card")[index].childNodes[number].innerHTML= indexed.description
         }
-        if (document.getElementsByClassName("card")[index].children[number].className == "text3") {
-
-          console.log(data.util[index + 1].description)
-
-          document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].description
-
+        if (document.getElementsByClassName("card")[index].childNodes[number].id == "Status") {
+          document.getElementsByClassName("card")[index].childNodes[number].innerHTML= indexed.status
         }
-        if (document.getElementsByClassName("card")[index].children[number].id == "Status") {
 
-          console.log(data.util[index + 1].status)
-
-          document.getElementsByClassName("card")[index].children[number].innerHTML= data.util[index + 1].status
-
-        }
-      }
-    }
-    if (window.location.href == "https://guinea1980-svg.github.io/ZYME/Proxies/") {
-      for (let number = 0; number < document.getElementsByClassName("card")[index].children.length; number++) {
-
-        console.log(document.getElementsByClassName("card")[index].children[number])
-        if (data.prox[index + 1].type == "Link") {
-
-          if (document.getElementsByClassName("card")[index].children[number].className == "button_download") {
-
-            console.log(data.prox[index + 1].link)
-
-            document.getElementsByClassName("card")[index].children[number].addEventListener("click", function () {
-
-                window.open(data.prox[index + 1].link, '_blank')
-                
-              })
-
-          }
-        }
-        if (document.getElementsByClassName("card")[index].children[number].className == "button_download") {
-          console.log(data.prox[index + 1].button_text)
-          document.getElementsByClassName("card")[index].children[number].innerHTML= data.prox[index + 1].button_text
-        }
-        if (document.getElementsByClassName("card")[index].children[number].className == "text2") {
-
-         console.log(data.prox[index + 1].title)
-
-          document.getElementsByClassName("card")[index].children[number].innerHTML= data.prox[index + 1].title
-        }
-        if (document.getElementsByClassName("card")[index].children[number].className == "text3") {
-
-          console.log(data.prox[index + 1].description)
-
-          document.getElementsByClassName("card")[index].children[number].innerHTML= data.prox[index + 1].description
-
-        }
-        if (document.getElementsByClassName("card")[index].children[number].id == "Status") {
-
-          console.log(data.prox[index + 1].status)
-
-          document.getElementsByClassName("card")[index].children[number].innerHTML= data.prox[index + 1].status
-
-        }
       }
     }
   }
