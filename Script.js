@@ -28,7 +28,7 @@ function Update_Site(data) {
 
     console.log(data.util[index + 1].type)
 
-    for (let number = 0; number > div.childNodes.length; number++) {
+    for (let name of data.util) {}
 
 
 
