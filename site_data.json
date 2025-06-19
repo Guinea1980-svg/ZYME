@@ -1,0 +1,76 @@
+{
+    "version": 1.101,
+    "util": {
+        "length": 7,
+        "1": {
+            "type": "Download",
+            "status": "Working ✔",
+            "title": "Kieron Virus",
+            "description": "This is a Simple script that i made that will change every image in every website to a Brain Rot on (Visit the Info Section and follow the tutorial on how to install it",
+            "link": "https://guinea1980-svg.github.io/ZYME/Kieron%20Virus%20.UserScript.js",
+            "button_text": "Download"
+        },
+        "2": {
+            "type": "Link",
+            "status": "Working ✔",
+            "title": "Blooket GUI Script",
+            "description": "This is a Blooket Cheat GUI Script that Can give you full control over how much score you have and see what you will get from a chest in gold rush (TIP: Press CTRL + E to toggle the visibility of the GUI)",
+            "link": "https://guinea1980-svg.github.io/ZYME/BlooketScript.txt",
+            "button_text": "Get Script"
+        },
+        "3": {
+            "type": "Link",
+            "status": "Working ✔",
+            "title": "Tamper Monkey",
+            "description": "This is a Chrome Extention that will run JS (Java Script) Code on Specific Websites its Great for Running Scripts on a website without opening the Console",
+            "link": "https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo",
+            "button_text": "Visit Site"
+        },
+        "4": {
+            "type": "Link",
+            "status": "Working ✔",
+            "title": "SenAI",
+            "description": "SenAi is a Website that Gives you the answers to questions in Seneca ",
+            "link": "https://senai.uk/seneca",
+            "button_text": "Visit Site"
+        },
+        "5": {
+            "type": "Link",
+            "status": "Working ✔",
+            "title": "School Cheats",
+            "description": "School Cheats is a Website with a whole load of cheating related stuff from a bot that plays that kahoot for you or Flooding and Crashing blooket lobbies. in short this Site is all around good for cheating in blooket or any related websites",
+            "link": "https://senai.uk/seneca",
+            "button_text": "Visit Site"
+            
+        },
+        "6": {
+            "type": "Link",
+            "status": "Working ✔",
+            "title": "Lorem ipsum dolor",
+            "description": "Lorem ipsum dolor",
+            "link": "",
+            "button_text": "Lorem ipsum dolor"
+
+        }
+        
+    },
+    "prox": {
+      "length": 3,
+      "1": {
+            "type": "Link",
+            "status": "Working ✔",
+            "title": "Interstellar",
+            "description": "A Really Good Proxy",
+            "link": "https://iamsteve.raspberryip.com/",
+          "button_text": "Visit Proxy"
+        },
+        "2": {
+            "type": "Link",
+            "status": "Working ✔",
+            "title": "Shadow",
+            "description": "Cool Clean UI Proxy",
+            "link": "https://farmhouse.mills-family.us/",
+            "button_text": "Visit Proxy"
+        }
+    }
+}
