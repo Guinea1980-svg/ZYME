@@ -24,7 +24,7 @@ function Update_Site(data) {
 
     console.log(document.getElementsByClassName("card")[index])
 
-  let div = document.getElementsByClassName("card")[index]
+    let div = document.getElementsByClassName("card")[index]
 
     console.log(data.util[index + 1].type)
 
@@ -34,24 +34,23 @@ function Update_Site(data) {
 
       if (document.getElementsByClassName("card")[index].childNodes[number]) {
 
-          document.getElementsByClassName("card")[index].childNodes[number].addEventListener("click", function(){
-            window.open(indexed.link, '_blank').focus();
+        document.getElementsByClassName("card")[index].childNodes[number].addEventListener("click", function () {
+          window.open(indexed.link, '_blank').focus();
         });
-        }
-        if (document.getElementsByClassName("card")[index].childNodes[number].class == "text2") {
-          document.getElementsByClassName("card")[index].childNodes[number].innerHTML= indexed.title
-        }
-        if (document.getElementsByClassName("card")[index].childNodes[number].class == "text3") {
-          document.getElementsByClassName("card")[index].childNodes[number].innerHTML= indexed.description
-        }
-        if (document.getElementsByClassName("card")[index].childNodes[number].id == "Status") {
-          document.getElementsByClassName("card")[index].childNodes[number].innerHTML= indexed.status
-        }
-
       }
+      if (document.getElementsByClassName("card")[index].childNodes[number].class == "text2") {
+        document.getElementsByClassName("card")[index].childNodes[number].innerHTML = indexed.title
+      }
+      if (document.getElementsByClassName("card")[index].childNodes[number].class == "text3") {
+        document.getElementsByClassName("card")[index].childNodes[number].innerHTML = indexed.description
+      }
+      if (document.getElementsByClassName("card")[index].childNodes[number].id == "Status") {
+        document.getElementsByClassName("card")[index].childNodes[number].innerHTML = indexed.status
+      }
+
     }
   }
-};
+}
 
 async function fetchData(url) {
   try {
