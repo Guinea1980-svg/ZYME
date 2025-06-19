@@ -13,7 +13,7 @@ function Update_Site(data) {
   for (let index = 0; index < Util.length - 1; index++) {
 
     console.log(index)
-
+    let indexed = data.util[index]
 
     console.log(indexed)
     console.log(indexed.link)
