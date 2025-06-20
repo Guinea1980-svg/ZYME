@@ -6,9 +6,10 @@ console.log("Version: " + Version)
 
 let Site_Data
 
-function Update_Site() {
+function Update_Site(data) {
+  let data_info = data
 
-  for (let indexed of Site_Data.topbar) {
+  for (let indexed of data_info.topbar) {
     for (let child of document.getElementsByClassName("topbar ")[0].children[0].children) {
         console.log(child)
         child.addEventListener("click", function () {
@@ -22,7 +23,7 @@ function Update_Site() {
   if (document.URL == "https://guinea1980-svg.github.io/ZYME/Utilities/") {
 
 
-  for (let indexed of Site_Data.util) {
+  for (let indexed of data_info.util) {
     for (let cardelem of document.getElementsByClassName("card")) {
 
 
@@ -52,7 +53,7 @@ function Update_Site() {
 if (document.URL == "https://guinea1980-svg.github.io/ZYME/Proxies/") {
 
 
-  for (let indexed of Site_Data.prox) {
+  for (let indexed of data_info.prox) {
     for (let cardelem of document.getElementsByClassName("card")) {
 
 
@@ -91,7 +92,7 @@ async function fetchData(url) {
     Site_Data = data
     console.log(`Data Version: ${data.version}`)
     console.log(`Data: ${Site_Data}`)
-    Update_Site()
+    Update_Site(data)
   }
 
   catch (error) {
