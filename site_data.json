@@ -1,8 +1,7 @@
 {
     "version": 1.101,
-    "util": {
-        "length": 7,
-        "1": {
+    "util": [
+        {
             "type": "Download",
             "status": "Working ✔",
             "title": "Kieron Virus",
@@ -10,7 +9,7 @@
             "link": "https://guinea1980-svg.github.io/ZYME/Kieron%20Virus%20.UserScript.js",
             "button_text": "Download"
         },
-        "2": {
+        {
             "type": "Link",
             "status": "Working ✔",
             "title": "Blooket GUI Script",
@@ -18,7 +17,7 @@
             "link": "https://guinea1980-svg.github.io/ZYME/BlooketScript.txt",
             "button_text": "Get Script"
         },
-        "3": {
+        {
             "type": "Link",
             "status": "Working ✔",
             "title": "Tamper Monkey",
@@ -26,7 +25,7 @@
             "link": "https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo",
             "button_text": "Visit Site"
         },
-        "4": {
+        {
             "type": "Link",
             "status": "Working ✔",
             "title": "SenAI",
@@ -34,37 +33,33 @@
             "link": "https://senai.uk/seneca",
             "button_text": "Visit Site"
         },
-        "5": {
+        {
             "type": "Link",
             "status": "Working ✔",
             "title": "School Cheats",
             "description": "School Cheats is a Website with a whole load of cheating related stuff from a bot that plays that kahoot for you or Flooding and Crashing blooket lobbies. in short this Site is all around good for cheating in blooket or any related websites",
             "link": "https://senai.uk/seneca",
             "button_text": "Visit Site"
-            
         },
-        "6": {
+        {
             "type": "Link",
             "status": "Working ✔",
             "title": "Lorem ipsum dolor",
             "description": "Lorem ipsum dolor",
             "link": "",
             "button_text": "Lorem ipsum dolor"
-
         }
-        
-    },
-    "prox": {
-      "length": 3,
-      "1": {
+    ],
+    "prox": [
+        {
             "type": "Link",
             "status": "Working ✔",
             "title": "Interstellar",
             "description": "A Really Good Proxy",
             "link": "https://iamsteve.raspberryip.com/",
-          "button_text": "Visit Proxy"
+            "button_text": "Visit Proxy"
         },
-        "2": {
+        {
             "type": "Link",
             "status": "Working ✔",
             "title": "Shadow",
@@ -72,5 +67,5 @@
             "link": "https://farmhouse.mills-family.us/",
             "button_text": "Visit Proxy"
         }
-    }
+    ]
 }

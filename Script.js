@@ -8,46 +8,32 @@ let Site_Data
 
 function Update_Site(data) {
 
-  let Util = data.util
 
-  for (let index = 0; index < Util.length - 1; index++) {
-
-    console.log(index)
-    let indexed = data.util[index]
-
-    console.log(indexed)
-    console.log(indexed.link)
-    console.log(indexed.title)
-    console.log(indexed.description)
-    console.log(indexed.status)
-    console.log(indexed.type)
-
-    console.log(document.getElementsByClassName("card")[index])
-
-    let div = document.getElementsByClassName("card")[index]
-
-    console.log(data.util[index + 1].type)
-
-    for (let name of data.util) {}
+  for (let indexed of data.util) {
+    for (let cardelem of document.getElementsByClassName("card")) {
 
 
+      console.log(indexed)
+      console.log(cardelem)
 
-      if (document.getElementsByClassName("card")[index].childNodes[number]) {
+      for (let child of cardelem.children) {
+        console.log(child)
 
-        document.getElementsByClassName("card")[index].childNodes[number].addEventListener("click", function () {
-          window.open(indexed.link, '_blank').focus();
-        });
+        if (child.className == "button_download") {
+          child.addEventListener("click", function () {
+            window.open(indexed.link, '_blank').focus();
+          });
+        }
+        if (child.className == "text2") {
+         child.innerHTML = indexed.title
+        }
+        if (child.className == "text3") {
+          child.innerHTML = indexed.description
+        }
+        if (child.id == "Status") {
+          child.innerHTML = indexed.status
+        }
       }
-      if (document.getElementsByClassName("card")[index].childNodes[number].class == "text2") {
-        document.getElementsByClassName("card")[index].childNodes[number].innerHTML = indexed.title
-      }
-      if (document.getElementsByClassName("card")[index].childNodes[number].class == "text3") {
-        document.getElementsByClassName("card")[index].childNodes[number].innerHTML = indexed.description
-      }
-      if (document.getElementsByClassName("card")[index].childNodes[number].id == "Status") {
-        document.getElementsByClassName("card")[index].childNodes[number].innerHTML = indexed.status
-      }
-
     }
   }
 }
