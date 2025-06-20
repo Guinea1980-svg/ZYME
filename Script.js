@@ -4,10 +4,9 @@ let Version = "1.6"
 console.log("Version: " + Version)
 
 
-let Site_Data
+const Site_Data
 
 function Update_Site(data) {
-  const data = data
 
   for (let indexed of data.topbar) {
     for (let child of document.getElementsByClassName("topbar ")[0].children[0].children) {
