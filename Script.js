@@ -23,7 +23,7 @@ function Update_Site(data) {
   if (document.URL == "https://guinea1980-svg.github.io/ZYME/Utilities/") {
 
 
-  for (let indexed of data_info.util) {
+  for (let indexed of data_info["util"]) {
     for (let cardelem of document.getElementsByClassName("card")) {
 
 
@@ -53,7 +53,7 @@ function Update_Site(data) {
 if (document.URL == "https://guinea1980-svg.github.io/ZYME/Proxies/") {
 
 
-  for (let indexed of data_info.prox) {
+  for (let indexed of data_info["prox"]) {
     for (let cardelem of document.getElementsByClassName("card")) {
 
 
