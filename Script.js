@@ -9,13 +9,7 @@ let Site_Data
 function Update_Site(data) {
 
    for (let indexed of data.topbar) {
-    for (let cardelem of document.getElementsByClassName("topbar ")[0].children[0].children) {
-
-
-      console.log(indexed)
-      console.log(cardelem)
-
-      for (let child of cardelem.children) {
+    for (let child of document.getElementsByClassName("topbar ")[0].children[0].children) {
         console.log(child)
         child.addEventListener("click", function () {
           window.open(indexed.link, '_blank').focus();
@@ -32,7 +26,6 @@ function Update_Site(data) {
     for (let cardelem of document.getElementsByClassName("card")) {
 
 
-      console.log(indexed)
       console.log(cardelem)
 
       for (let child of cardelem.children) {
@@ -63,7 +56,6 @@ if (document.URL == "https://guinea1980-svg.github.io/ZYME/Proxies/") {
     for (let cardelem of document.getElementsByClassName("card")) {
 
 
-      console.log(indexed)
       console.log(cardelem)
 
       for (let child of cardelem.children) {
