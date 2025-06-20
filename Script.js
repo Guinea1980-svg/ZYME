@@ -91,7 +91,7 @@ async function fetchData(url) {
     Site_Data = data
     console.log(`Data Version: ${data.version}`)
     console.log(`Data: ${Site_Data}`)
-    Update_Site(data)
+    Update_Site()
   }
 
   catch (error) {
