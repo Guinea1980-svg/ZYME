@@ -192,3 +192,17 @@ function NewTabLink(url) {
 
   window.open(url, '_blank').focus();
 };
+
+//const Amount
+//const ADDtext = ""
+
+//for (let index = 0; index < Amount; index++) {
+  //ADDtext = ADDtext + "."
+
+
+
+
+  
+//}
+
+
