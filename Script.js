@@ -6,9 +6,9 @@ console.log("Version: " + Version)
 
 let Site_Data
 
-function Update_Site(data) {
+function Update_Site() {
 
-   for (let indexed of data.topbar) {
+  for (let indexed of Site_Data.topbar) {
     for (let child of document.getElementsByClassName("topbar ")[0].children[0].children) {
         console.log(child)
         child.addEventListener("click", function () {
@@ -22,7 +22,7 @@ function Update_Site(data) {
   if (document.URL == "https://guinea1980-svg.github.io/ZYME/Utilities/") {
 
 
-  for (let indexed of data.util) {
+  for (let indexed of Site_Data.util) {
     for (let cardelem of document.getElementsByClassName("card")) {
 
 
@@ -52,7 +52,7 @@ function Update_Site(data) {
 if (document.URL == "https://guinea1980-svg.github.io/ZYME/Proxies/") {
 
 
-  for (let indexed of data.prox) {
+  for (let indexed of Site_Data.prox) {
     for (let cardelem of document.getElementsByClassName("card")) {
 
 
@@ -79,7 +79,7 @@ if (document.URL == "https://guinea1980-svg.github.io/ZYME/Proxies/") {
     }
   }
 }
-}
+
 
 async function fetchData(url) {
   try {
