@@ -8,6 +8,25 @@ let Site_Data
 
 function Update_Site(data) {
 
+   for (let indexed of data.topbar) {
+    for (let cardelem of document.getElementsByClassName("topbar ")) {
+
+
+      console.log(indexed)
+      console.log(cardelem)
+
+      for (let child of cardelem.children) {
+        console.log(child)
+        child.addEventListener("click", function () {
+          window.open(indexed.link, '_blank').focus();
+        });
+        child.innerHTML = indexed.button_download
+      }
+    }
+  }
+
+  if (document.URL == "https://guinea1980-svg.github.io/ZYME/Utilities/") {
+
 
   for (let indexed of data.util) {
     for (let cardelem of document.getElementsByClassName("card")) {
@@ -36,6 +55,38 @@ function Update_Site(data) {
       }
     }
   }
+}
+if (document.URL == "https://guinea1980-svg.github.io/ZYME/Proxies/") {
+
+
+  for (let indexed of data.prox) {
+    for (let cardelem of document.getElementsByClassName("card")) {
+
+
+      console.log(indexed)
+      console.log(cardelem)
+
+      for (let child of cardelem.children) {
+        console.log(child)
+
+        if (child.className == "button_download") {
+          child.addEventListener("click", function () {
+            window.open(indexed.link, '_blank').focus();
+          });
+        }
+        if (child.className == "text2") {
+         child.innerHTML = indexed.title
+        }
+        if (child.className == "text3") {
+          child.innerHTML = indexed.description
+        }
+        if (child.id == "Status") {
+          child.innerHTML = indexed.status
+        }
+      }
+    }
+  }
+}
 }
 
 async function fetchData(url) {

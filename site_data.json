@@ -67,5 +67,29 @@
             "link": "https://farmhouse.mills-family.us/",
             "button_text": "Visit Proxy"
         }
+    ],
+    "topbar": [
+        {
+            "link": "https://guinea1980-svg.github.io/ZYME",
+            "button_text": "Home"
+        },
+        {
+            "link": "https://guinea1980-svg.github.io/ZYME/Info",
+            "button_text": "Info"
+        }
+        ,
+        {
+            "link": "https://guinea1980-svg.github.io/ZYME/Utilities",
+            "button_text": "Utilities"
+        }
+        ,
+        {
+            "link": "https://guinea1980-svg.github.io/ZYME/Proxies",
+            "button_text": "Proxies"
+        },
+        {
+            "link": "https://guinea1980-svg.github.io/ZYME/Games",
+            "button_text": "Games"
+        }
     ]
 }
