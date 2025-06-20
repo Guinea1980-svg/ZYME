@@ -66,7 +66,7 @@ if (document.URL == "https://guinea1980-svg.github.io/ZYME/Proxies/") {
       console.log(indexed)
       console.log(cardelem)
 
-      for (let child of cardelem.children) {
+      for (let child of cardelem.children[1].children) {
         console.log(child)
 
         if (child.className == "button_download") {
