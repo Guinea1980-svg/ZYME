@@ -6,7 +6,9 @@ console.log("Version: " + Version)
 
 let Site_Data
 
-function Update_Site(data) {
+function Update_Site(rec_data) {
+
+  const data = rec_data
 
   for (let indexed of data.topbar) {
     for (let child of document.getElementsByClassName("topbar ")[0].children[0].children) {
