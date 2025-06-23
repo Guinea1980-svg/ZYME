@@ -18,10 +18,10 @@ function update_topbar(data) {
   }
 }
 
-function update_util(data) {
+function update_util(data1) {
   for (let index = 0; index < document.getElementsByClassName("card").length; index++) {
     const card = document.getElementsByClassName("card")[index];
-    const data = data["util"][index]
+    const data = data1["util"][index]
     for (const child of card.children) {
       if (child.className == "button_download") {
         child.addEventListener("click", function () {
@@ -41,10 +41,10 @@ function update_util(data) {
   }
 }
 
-function update_prox(data) {
+function update_prox(data1) {
   for (let index = 0; index < document.getElementsByClassName("card").length; index++) {
     const card = document.getElementsByClassName("card")[index];
-    const data = data["prox"][index]
+    const data = data1["prox"][index]
     for (const child of card.children) {
       if (child.className == "button_download") {
         child.addEventListener("click", function () {
