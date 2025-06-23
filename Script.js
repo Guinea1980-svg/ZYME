@@ -10,11 +10,11 @@ function update_topbar(data1) {
   for (let index = 0; index < document.getElementsByClassName("topbar ")[0].children[0].children.length; index++) {
     const card = document.getElementsByClassName("topbar ")[0].children[0].children[index];
     const data = data1["topbar"][index]
-    console.log(child)
-    child.addEventListener("click", function () {
+    console.log(card)
+    card.addEventListener("click", function () {
       window.open(data1.link, '_blank').focus();
     });
-    child.children[0].innerHTML = data1.button_download
+    card.children[0].innerHTML = data.button_text
   }
 }
 
