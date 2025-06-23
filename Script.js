@@ -7,13 +7,13 @@ console.log("Version: " + Version)
 let Site_Data
 
 function update_topbar(data) {
-  for (let indexed of data.topbar) {
+  for (let data1 of data["topbar"]) {
     for (let child of document.getElementsByClassName("topbar ")[0].children[0].children) {
       console.log(child)
       child.addEventListener("click", function () {
-        window.open(indexed.link, '_blank').focus();
+        window.open(data1.link, '_blank').focus();
       });
-      child.innerHTML = indexed.button_download
+      child.innerHTML = data1.button_download
     }
   }
 }
@@ -25,17 +25,17 @@ function update_util(data1) {
     for (const child of card.children) {
       if (child.className == "button_download") {
         child.addEventListener("click", function () {
-          window.open(indexed.link, '_blank').focus();
+          window.open(data.link, '_blank').focus();
         });
       }
       if (child.className == "text2") {
-        child.innerHTML = indexed.title
+        child.innerHTML = data.title
       } 
       if (child.className == "text3") {
-        child.innerHTML = indexed.description
+        child.innerHTML = data.description
       }
       if (child.className == "Status_Working") {
-         child.innerHTML = indexed.status
+         child.innerHTML = data.status
       }
     }
   }
@@ -48,17 +48,17 @@ function update_prox(data1) {
     for (const child of card.children) {
       if (child.className == "button_download") {
         child.addEventListener("click", function () {
-          window.open(indexed.link, '_blank').focus();
+          window.open(data.link, '_blank').focus();
         });
       }
       if (child.className == "text2") {
-        child.innerHTML = indexed.title
+        child.innerHTML = data.title
       } 
       if (child.className == "text3") {
-        child.innerHTML = indexed.description
+        child.innerHTML = data.description
       }
       if (child.className == "Status_Working") {
-         child.innerHTML = indexed.status
+         child.innerHTML = data.status
       }
     }
   }
