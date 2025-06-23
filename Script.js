@@ -79,25 +79,25 @@ function Update_Site(data) {
 
 
 
-async function fetchData(url) {
+
+async function fetchData(url, callback) { 
   try {
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
-    const data = await response.json();
-    Site_Data = await response.json()
-    console.log(`Data Version: ${await response.json().version}`)
-    console.log(`Data: ${Site_Data}`)
-    Update_Site(await response.json())
-  }
 
-  catch (error) {
+    const data = await response.json(); // Assuming the response is JSON
+    if (callback && typeof callback === 'function') {
+      callback(data); // Run the callback with the fetched data
+    }
+  } catch (error) {
     console.error('Fetch error:', error);
   }
 }
 
-fetchData("https://guinea1980-svg.github.io/ZYME/site_data.json")
+
+fetchData("https://guinea1980-svg.github.io/ZYME/site_data.json", Update_Site)
 
 function getAllUrlParams(url) {
 
