@@ -19,52 +19,46 @@ function update_topbar(data) {
 }
 
 function update_util(data) {
-  for (let indexed of data["util"]) {
-    for (let cardelem of document.getElementsByClassName("card")) {
-      for (let child of cardelem.children) {
-        if (child.className == "button_download") {
-          child.addEventListener("click", function () {
-            window.open(indexed.link, '_blank').focus();
-          });
-        }
-        if (child.className == "text2") {
-         child.innerHTML = indexed.title
-        }
-        if (child.className == "text3") {
-          child.innerHTML = indexed.description
-        }
-        if (child.id == "Status") {
-          child.innerHTML = indexed.status
-        }
+  for (let index = 0; index < document.getElementsByClassName("card").length; index++) {
+    const card = document.getElementsByClassName("card")[index];
+    const data = data["util"][index]
+    for (const child of card.children) {
+      if (child.className == "button_download") {
+        child.addEventListener("click", function () {
+          window.open(indexed.link, '_blank').focus();
+        });
+      }
+      if (child.className == "text2") {
+        child.innerHTML = indexed.title
+      } 
+      if (child.className == "text3") {
+        child.innerHTML = indexed.description
+      }
+      if (child.className == "Status_Working") {
+         child.innerHTML = indexed.status
       }
     }
   }
 }
 
 function update_prox(data) {
-  for (let indexed of data["prox"]) {
-    for (let cardelem of document.getElementsByClassName("card")) {
-
-
-      console.log(cardelem)
-
-      for (let child of cardelem.children) {
-        console.log(child)
-
-        if (child.className == "button_download") {
-          child.addEventListener("click", function () {
-            window.open(indexed.link, '_blank').focus();
-          });
-        }
-        if (child.className == "text2") {
-         child.innerHTML = indexed.title
-        }
-        if (child.className == "text3") {
-          child.innerHTML = indexed.description
-        }
-        if (child.id == "Status") {
-          child.innerHTML = indexed.status
-        }
+  for (let index = 0; index < document.getElementsByClassName("card").length; index++) {
+    const card = document.getElementsByClassName("card")[index];
+    const data = data["prox"][index]
+    for (const child of card.children) {
+      if (child.className == "button_download") {
+        child.addEventListener("click", function () {
+          window.open(indexed.link, '_blank').focus();
+        });
+      }
+      if (child.className == "text2") {
+        child.innerHTML = indexed.title
+      } 
+      if (child.className == "text3") {
+        child.innerHTML = indexed.description
+      }
+      if (child.className == "Status_Working") {
+         child.innerHTML = indexed.status
       }
     }
   }
@@ -80,7 +74,9 @@ function Update_Site(data) {
   if (document.URL == "https://guinea1980-svg.github.io/ZYME/Proxies/") {
     update_prox(data)
   }
+  
 }
+
 
 
 async function fetchData(url) {
