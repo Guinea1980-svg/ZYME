@@ -74,7 +74,7 @@ function Update_Site(data) {
   if (document.URL == "https://guinea1980-svg.github.io/ZYME/Proxies/") {
     update_prox(data)
   }
-  
+
 }
 
 
@@ -86,10 +86,10 @@ async function fetchData(url) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     const data = await response.json();
-    Site_Data = data
-    console.log(`Data Version: ${data.version}`)
+    Site_Data = await response.json()
+    console.log(`Data Version: ${await response.json().version}`)
     console.log(`Data: ${Site_Data}`)
-    Update_Site(data)
+    Update_Site(await response.json())
   }
 
   catch (error) {
