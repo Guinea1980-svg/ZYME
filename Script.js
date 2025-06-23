@@ -13,7 +13,7 @@ function update_topbar(data) {
       child.addEventListener("click", function () {
         window.open(data1.link, '_blank').focus();
       });
-      child.children[0].innerHTML = data1.button_download
+      child.children[0].innerHTML = data1.button_text
     }
   }
 }
