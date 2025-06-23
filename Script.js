@@ -6,15 +6,15 @@ console.log("Version: " + Version)
 
 let Site_Data
 
-function update_topbar(data) {
-  for (let data1 of data["topbar"]) {
-    for (let child of document.getElementsByClassName("topbar ")[0].children[0].children) {
-      console.log(child)
-      child.addEventListener("click", function () {
-        window.open(data1.link, '_blank').focus();
-      });
-      child.children[0].innerHTML = data1.button_text
-    }
+function update_topbar(data1) {
+  for (let index = 0; index < document.getElementsByClassName("topbar ")[0].children[0].children.length; index++) {
+    const card = document.getElementsByClassName("topbar ")[0].children[0].children[index];
+    const data = data1["topbar"][index]
+    console.log(child)
+    child.addEventListener("click", function () {
+      window.open(data1.link, '_blank').focus();
+    });
+    child.children[0].innerHTML = data1.button_download
   }
 }
 
